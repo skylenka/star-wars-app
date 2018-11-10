@@ -4,6 +4,7 @@ import Starships from './components/cards/Starships.js';
 import Peoples from './components/cards/People.js';
 import Planet from './components/cards/Planets.js';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { Menu, MenuItem } from 'semantic-ui-react'
 
 function Home() {
   return (
@@ -47,20 +48,20 @@ class App extends Component {
       <div>
         <Router>
       <div>
-        <ul>
-          <li>
+        <Menu>
+          <Menu.Item>
             <Link to="/">Home</Link>
-          </li>
-          <li>
+          </Menu.Item>
+          <Menu.Item>
             <Link to="/spacecrafts">Spacecrafts</Link>
-          </li>
-          <li>
+          </Menu.Item>
+          <Menu.Item>
             <Link to="/people">People</Link>
-          </li>
-          <li>
+          </Menu.Item>
+          <Menu.Item>
             <Link to="/planets">Planets</Link>
-          </li>
-        </ul>
+          </Menu.Item>
+        </Menu>
 
         <hr />
 
