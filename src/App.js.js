@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import 'semantic-ui-css/semantic.min.css';
 import Starships from './components/cards/Starships.js';
-import Peoples from './components/cards/People.js';
-import Planet from './components/cards/Planets.js';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 function Home() {
@@ -26,7 +24,6 @@ function People() {
   return (
     <div>
       <h2>People</h2>
-      <Peoples />
     </div>
   );
 }
@@ -35,7 +32,6 @@ function Planets() {
   return (
     <div>
       <h2>Planets</h2>
-      <Planet />
     </div>
   );
 }
