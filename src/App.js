@@ -4,7 +4,7 @@ import Starships from './components/cards/Starships.js';
 import Peoples from './components/cards/People.js';
 import Planet from './components/cards/Planets.js';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import { Menu, MenuItem } from 'semantic-ui-react'
+import { Menu } from 'semantic-ui-react'
 
 function Home() {
   return (
