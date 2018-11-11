@@ -9,12 +9,18 @@ class Peoples extends Component {
   
     componentDidMount() {
       fetch('https://swapi.co/api/people/')
-        .then(resp => resp.json())
-        .then(({ results }) => {
+        .then(resp =>  {
+          if (resp.ok)
+          return resp.json();
+          else
+          throw new Error ('Błąd seci!');
+        }).then(({ results }) => {
           this.setState({
-            people: results,
-          })
-        })
+            starships: results,
+          });
+        }).catch(err => {
+          console.log(err)
+        });
     }
   
     render() {

@@ -9,12 +9,18 @@ class Planet extends Component {
   
     componentDidMount() {
       fetch('https://swapi.co/api/planets/')
-        .then(resp => resp.json())
-        .then(({ results }) => {
+        .then(resp =>  {
+          if (resp.ok)
+          return resp.json();
+          else
+          throw new Error ('Błąd seci!');
+        }).then(({ results }) => {
           this.setState({
-            planets: results,
-          })
-        })
+            starships: results,
+          });
+        }).catch(err => {
+          console.log(err)
+        });
     }
   
     render() {
