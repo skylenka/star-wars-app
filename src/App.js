@@ -3,7 +3,7 @@ import 'semantic-ui-css/semantic.min.css';
 import Starships from './components/cards/Starships.js';
 import Peoples from './components/cards/People.js';
 import Planet from './components/cards/Planets.js';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import { Menu } from 'semantic-ui-react'
 
 function Home() {
@@ -57,26 +57,26 @@ class App extends Component {
           <Menu.Item
             name='home'
             active={activeItem === 'home'}
-            onClick={this.handleItemClick}>
-            <Link to="/">Home</Link>
+            onClick={this.handleItemClick}
+            href="/">
           </Menu.Item>
           <Menu.Item
           name='spacecrafts'
           active={activeItem === 'spacecrafts'}
-          onClick={this.handleItemClick}>
-            <Link to="/spacecrafts">Spacecrafts</Link>
+          onClick={this.handleItemClick}
+          href="/spacecrafts">
           </Menu.Item>
           <Menu.Item
           name='people'
           active={activeItem === 'people'}
-          onClick={this.handleItemClick}>
-            <Link to="/people">People</Link>
+          onClick={this.handleItemClick}
+          href="/people">
           </Menu.Item>
           <Menu.Item
           name='planets'
           active={activeItem === 'planets'}
-          onClick={this.handleItemClick}>
-            <Link to="/planets">Planets</Link>
+          onClick={this.handleItemClick}
+          href="/planets">
           </Menu.Item>
         </Menu>
 
