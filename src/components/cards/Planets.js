@@ -28,16 +28,16 @@ class Planet extends Component {
     render() {
       return (
           <Card.Group>
-            {this.state.planets.map(planets => (
-              <Card key={planets.url}>
+            {this.state.planets.map(planet => (
+              <Card key={planet.url}>
                 <Card.Content>
-                  <Card.Header>{planets.name}</Card.Header>
-                  <Card.Meta>{planets.climate}t</Card.Meta>
+                  <Card.Header>{planet.name}</Card.Header>
+                  <Card.Meta>{planet.climate}</Card.Meta>
                   <Card.Description>
-                  {planets.gravity}
+                  {planet.gravity}
                   </Card.Description>
                   <Card.Description>
-                  {planets.terrain}
+                  {planet.terrain}
                   </Card.Description>
                 </Card.Content>
               </Card>

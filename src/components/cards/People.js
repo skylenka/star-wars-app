@@ -28,16 +28,16 @@ class Peoples extends Component {
     render() {
       return (
           <Card.Group>
-            {this.state.people.map(people => (
-              <Card key={people.url}>
+            {this.state.people.map(person => (
+              <Card key={person.url}>
                 <Card.Content>
-                  <Card.Header>{people.name}</Card.Header>
-                  <Card.Meta>{people.height}t</Card.Meta>
+                  <Card.Header>{person.name}</Card.Header>
+                  <Card.Meta>{person.height}</Card.Meta>
                   <Card.Description>
-                  {people.birth_year}
+                  {person.birth_year}
                   </Card.Description>
                   <Card.Description>
-                  {people.gender}
+                  {person.gender}
                   </Card.Description>
                 </Card.Content>
               </Card>

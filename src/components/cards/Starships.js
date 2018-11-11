@@ -31,7 +31,7 @@ class Starships extends Component {
               <Card key={starship.url}>
                 <Card.Content>
                   <Card.Header>{starship.name}</Card.Header>
-                  <Card.Meta>{starship.model}t</Card.Meta>
+                  <Card.Meta>{starship.model}</Card.Meta>
                   <Card.Description>
                   {starship.manufacturer}
                   </Card.Description>
