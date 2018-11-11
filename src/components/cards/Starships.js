@@ -4,14 +4,7 @@ import 'semantic-ui-css/semantic.min.css';
 
 class Starships extends Component {
     state = {
-      starships: [
-        {
-          name: '',
-          model: '',
-          manufacturer: '',
-          url: '',
-        },
-      ],
+      starships: []
     }
   
     componentDidMount() {
@@ -20,7 +13,7 @@ class Starships extends Component {
         .then(({ results }) => {
           this.setState({
             starships: results,
-          })
+          });
         })
     }
   

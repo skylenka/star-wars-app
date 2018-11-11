@@ -57,15 +57,13 @@ class App extends Component {
           <Menu.Item
             name='home'
             active={activeItem === 'home'}
-            onClick={this.handleItemClick}
-          >
+            onClick={this.handleItemClick}>
             <Link to="/">Home</Link>
           </Menu.Item>
           <Menu.Item
           name='spacecrafts'
           active={activeItem === 'spacecrafts'}
-          onClick={this.handleItemClick}
-          >
+          onClick={this.handleItemClick}>
             <Link to="/spacecrafts">Spacecrafts</Link>
           </Menu.Item>
           <Menu.Item

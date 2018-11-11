@@ -4,15 +4,7 @@ import 'semantic-ui-css/semantic.min.css';
 
 class Peoples extends Component {
     state = {
-      people: [
-        {
-          name: '',
-          height: '',
-          birth_year: '',
-          gender: '',
-          url: '',
-        },
-      ],
+      people: []
     }
   
     componentDidMount() {

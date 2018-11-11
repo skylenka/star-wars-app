@@ -4,15 +4,7 @@ import 'semantic-ui-css/semantic.min.css';
 
 class Planet extends Component {
     state = {
-      planets: [
-        {
-          name: '',
-          climate: '',
-          gravity: '',
-          terrain: '',
-          url: '',
-        },
-      ],
+      planets: []
     }
   
     componentDidMount() {
