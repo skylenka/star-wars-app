@@ -11,6 +11,7 @@ class Starships extends Component {
     }
   
     componentDidMount() {
+
       fetch(this.state.curr)
         .then(resp =>  {
           if (resp.ok)
@@ -27,12 +28,58 @@ class Starships extends Component {
           console.log(err)
         });
     }
-  
+
     render() {
       return (
         <div>
-            <Button content='Prev' icon='left arrow' labelPosition='left' size='mini'/>
-            <Button content='Next' icon='right arrow' labelPosition='right' size='mini' onClick={ () => this.setState({url:this.state.next}) } />
+            <Button 
+            content='Prev' 
+            icon='left arrow' 
+            labelPosition='left' 
+            size='mini'
+            onClick={ () => {
+              if (this.state.prev) {
+                fetch(this.state.prev)
+                .then(resp =>  {
+                  if (resp.ok)
+                  return resp.json();
+                  else
+                  throw new Error ('Błąd seci!');
+                }).then(({ results, next, previous }) => {
+                  this.setState({
+                    starships: results,
+                    next: next,
+                    prev: previous,
+                  });
+                }).catch(err => {
+                  console.log(err)
+                })
+                }
+            }}/>
+            <Button 
+            content='Next' 
+            icon='right arrow' 
+            labelPosition='right' 
+            size='mini' 
+            onClick={ () => {
+              if (this.state.next) {
+                fetch(this.state.next)
+                .then(resp =>  {
+                  if (resp.ok)
+                  return resp.json();
+                  else
+                  throw new Error ('Błąd seci!');
+                }).then(({ results, next, previous }) => {
+                  this.setState({
+                    starships: results,
+                    next: next,
+                    prev: previous,
+                  });
+                }).catch(err => {
+                  console.log(err)
+                })
+                }
+            }} />
             <hr />
             <Card.Group>
               {this.state.starships.map(starship => (
