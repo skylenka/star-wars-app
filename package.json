@@ -13,12 +13,6 @@
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^0.83.0"
   },
-  "lint-staged": {
-       "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
-         "prettier --single-quote --write",
-         "git add"
-       ]
-     },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -38,5 +32,11 @@
         "hooks": {
          "pre-commit": "lint-staged"
         }
+      },
+  "lint-staged": {
+        "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+          "prettier --single-quote --write",
+          "git add"
+        ]
       }
 }

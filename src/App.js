@@ -3,8 +3,8 @@ import 'semantic-ui-css/semantic.min.css';
 import Starships from './components/cards/Starships.js';
 import Peoples from './components/cards/People.js';
 import Planet from './components/cards/Planets.js';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import { Menu } from 'semantic-ui-react'
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { Menu } from 'semantic-ui-react';
 
 function Home() {
   return (
@@ -42,58 +42,58 @@ function Planets() {
 }
 
 class App extends Component {
-  state = {}
+  state = {};
 
-  handleItemClick = (e, { name }) => this.setState({ activeItem: name })
+  handleItemClick = (e, { name }) => this.setState({ activeItem: name });
 
   render() {
-    const { activeItem } = this.state
+    const { activeItem } = this.state;
 
     return (
       <div>
         <Router>
-      <div>
-        <Menu>
-          <Menu.Item
-            name='home'
-            active={activeItem === 'home'}
-            onClick={this.handleItemClick}
-            as={Link}
-            to="/">
-          </Menu.Item>
-          <Menu.Item
-          name='spacecrafts'
-          active={activeItem === 'spacecrafts'}
-          onClick={this.handleItemClick}
-          as={Link}
-          to="/spacecrafts">
-          </Menu.Item>
-          <Menu.Item
-          name='people'
-          active={activeItem === 'people'}
-          onClick={this.handleItemClick}
-          as={Link}
-          to="/people">
-          </Menu.Item>
-          <Menu.Item
-          name='planets'
-          active={activeItem === 'planets'}
-          onClick={this.handleItemClick}
-          as={Link}
-          to="/planets">
-          </Menu.Item>
-        </Menu>
+          <div>
+            <Menu>
+              <Menu.Item
+                name="home"
+                active={activeItem === 'home'}
+                onClick={this.handleItemClick}
+                as={Link}
+                to="/"
+              />
+              <Menu.Item
+                name="spacecrafts"
+                active={activeItem === 'spacecrafts'}
+                onClick={this.handleItemClick}
+                as={Link}
+                to="/spacecrafts"
+              />
+              <Menu.Item
+                name="people"
+                active={activeItem === 'people'}
+                onClick={this.handleItemClick}
+                as={Link}
+                to="/people"
+              />
+              <Menu.Item
+                name="planets"
+                active={activeItem === 'planets'}
+                onClick={this.handleItemClick}
+                as={Link}
+                to="/planets"
+              />
+            </Menu>
 
-        <hr />
+            <hr />
 
-        <Route exact path="/" component={Home} />
-        <Route path="/spacecrafts" component={Spacecrafts} />
-        <Route path="/people" component={People} />
-        <Route path="/planets" component={Planets} />
+            <Route exact path="/" component={Home} />
+            <Route path="/spacecrafts" component={Spacecrafts} />
+            <Route path="/people" component={People} />
+            <Route path="/planets" component={Planets} />
+          </div>
+        </Router>
       </div>
-    </Router>
-      </div>
-    )
+    );
   }
 }
 
