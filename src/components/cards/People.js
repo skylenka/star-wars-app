@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Card, Button } from 'semantic-ui-react';
 import 'semantic-ui-css/semantic.min.css';
 
-class Peoples extends Component {
+class People extends Component {
   state = {
     curr: 'https://swapi.co/api/people/',
     prev: '',
@@ -31,6 +31,7 @@ class Peoples extends Component {
   render() {
     return (
       <div>
+        <h2>People</h2>
         <Button
           content="Prev"
           icon="left arrow"
@@ -99,4 +100,4 @@ class Peoples extends Component {
   }
 }
 
-export default Peoples;
+export default People;

@@ -31,6 +31,7 @@ class Starships extends Component {
   render() {
     return (
       <div>
+        <h2>Spacecrafts</h2>
         <Button
           content="Prev"
           icon="left arrow"
