@@ -4,6 +4,7 @@ import Starships from './components/cards/Starships.js';
 import People from './components/cards/People.js';
 import Planet from './components/cards/Planets.js';
 import Home from './components/cards/Home.js';
+import NotFound from './components/cards/NotFound.js';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import { Menu } from 'semantic-ui-react';
 
@@ -32,12 +33,12 @@ class App extends Component {
               <MenuLink
                 activeOnlyWhenExact={true}
                 name="home"
-                as={Menu.Item}
+                as={Link}
                 to="/"
               />
-              <MenuLink name="spacecrafts" as={Menu.Item} to="/spacecrafts" />
-              <MenuLink name="people" as={Menu.Item} to="/people" />
-              <MenuLink name="planets" as={Menu.Item} to="/planets" />
+              <MenuLink name="spacecrafts" as={Link} to="/spacecrafts" />
+              <MenuLink name="people" as={Link} to="/people" />
+              <MenuLink name="planets" as={Link} to="/planets" />
             </Menu>
 
             <hr />
@@ -46,6 +47,7 @@ class App extends Component {
             <Route path="/spacecrafts" component={Starships} />
             <Route path="/people" component={People} />
             <Route path="/planets" component={Planet} />
+            <Route path="*" component={NotFound} />
           </div>
         </Router>
       </div>
