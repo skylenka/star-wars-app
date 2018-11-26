@@ -7,6 +7,21 @@ import Home from './components/cards/Home.js';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import { Menu } from 'semantic-ui-react';
 
+function MenuLink({ name, to, activeOnlyWhenExact }) {
+  return (
+    <Route
+      path={to}
+      exact={activeOnlyWhenExact}
+      children={({ match }) => (
+        <div className={match ? 'active' : ''}>
+          {match ? '> ' : ''}
+          <Link to={to}>{name}</Link>
+        </div>
+      )}
+    />
+  );
+}
+
 class App extends Component {
   render() {
     return (
@@ -14,10 +29,15 @@ class App extends Component {
         <Router>
           <div>
             <Menu>
-              <Menu.Item name="home" as={Link} to="/" />
-              <Menu.Item name="spacecrafts" as={Link} to="/spacecrafts" />
-              <Menu.Item name="people" as={Link} to="/people" />
-              <Menu.Item name="planets" as={Link} to="/planets" />
+              <MenuLink
+                activeOnlyWhenExact={true}
+                name="home"
+                as={Menu.Item}
+                to="/"
+              />
+              <MenuLink name="spacecrafts" as={Menu.Item} to="/spacecrafts" />
+              <MenuLink name="people" as={Menu.Item} to="/people" />
+              <MenuLink name="planets" as={Menu.Item} to="/planets" />
             </Menu>
 
             <hr />
