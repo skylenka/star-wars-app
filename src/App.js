@@ -14,10 +14,9 @@ function MenuLink({ name, to, activeOnlyWhenExact }) {
       path={to}
       exact={activeOnlyWhenExact}
       children={({ match }) => (
-        <div className={match ? 'active' : ''}>
-          {match ? '> ' : ''}
+        <Menu.Item className={match ? 'active' : ''}>
           <Link to={to}>{name}</Link>
-        </div>
+        </Menu.Item>
       )}
     />
   );
