@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Buttons from '../elements/Buttons';
 import { Card, Button } from 'semantic-ui-react';
 import 'semantic-ui-css/semantic.min.css';
 
@@ -32,7 +33,12 @@ class Starships extends Component {
     return (
       <div>
         <h2>Spacecrafts</h2>
-        <Button
+        <Buttons
+          curr={this.state.curr}
+          prev={this.state.prev}
+          next={this.state.next}
+        />
+        {/* <Button
           content="Prev"
           icon="left arrow"
           labelPosition="left"
@@ -42,7 +48,7 @@ class Starships extends Component {
               fetch(this.state.prev)
                 .then(resp => {
                   if (resp.ok) return resp.json();
-                  else throw new Error('Błąd seci!');
+                  else throw new Error("Błąd seci!");
                 })
                 .then(({ results, next, previous }) => {
                   this.setState({
@@ -67,7 +73,7 @@ class Starships extends Component {
               fetch(this.state.next)
                 .then(resp => {
                   if (resp.ok) return resp.json();
-                  else throw new Error('Błąd seci!');
+                  else throw new Error("Błąd seci!");
                 })
                 .then(({ results, next, previous }) => {
                   this.setState({
@@ -81,7 +87,7 @@ class Starships extends Component {
                 });
             }
           }}
-        />
+        /> */}
         <hr />
         <Card.Group>
           {this.state.starships.map(starship => (
