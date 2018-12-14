@@ -5,7 +5,7 @@ import 'semantic-ui-css/semantic.min.css';
 class Buttons extends Component {
   render() {
     return (
-      <div>
+      <>
         <Button
           content="Prev"
           icon="left arrow"
@@ -56,7 +56,7 @@ class Buttons extends Component {
             }
           }}
         />
-      </div>
+      </>
     );
   }
 }

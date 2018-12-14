@@ -31,7 +31,7 @@ class Starships extends Component {
 
   render() {
     return (
-      <div>
+      <>
         <h2>Spacecrafts</h2>
         <Buttons
           curr={this.state.curr}
@@ -100,7 +100,7 @@ class Starships extends Component {
             </Card>
           ))}
         </Card.Group>
-      </div>
+      </>
     );
   }
 }

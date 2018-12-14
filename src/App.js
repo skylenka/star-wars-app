@@ -25,7 +25,7 @@ function MenuLink({ name, to, activeOnlyWhenExact }) {
 class App extends Component {
   render() {
     return (
-      <div>
+      <>
         <Router>
           <div>
             <Menu>
@@ -49,7 +49,7 @@ class App extends Component {
             <Route path="*" component={NotFound} />
           </div>
         </Router>
-      </div>
+      </>
     );
   }
 }

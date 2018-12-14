@@ -30,7 +30,7 @@ class People extends Component {
 
   render() {
     return (
-      <div>
+      <>
         <h2>People</h2>
         <Button
           content="Prev"
@@ -95,7 +95,7 @@ class People extends Component {
             </Card>
           ))}
         </Card.Group>
-      </div>
+      </>
     );
   }
 }
