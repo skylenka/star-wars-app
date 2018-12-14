@@ -5,8 +5,8 @@ import 'semantic-ui-css/semantic.min.css';
 class People extends Component {
   state = {
     curr: 'https://swapi.co/api/people/',
-    prev: '',
-    next: '',
+    prev: null,
+    next: null,
     people: []
   };
 
@@ -28,6 +28,48 @@ class People extends Component {
       });
   }
 
+  handleButton = type => {
+    if (type === 'previous') {
+      if (this.state.prev) {
+        fetch(this.state.prev)
+          .then(resp => {
+            if (resp.ok) return resp.json();
+            else throw new Error('Błąd seci!');
+          })
+          .then(({ results, next, previous }) => {
+            this.setState({
+              people: results,
+              next: next,
+              prev: previous
+            });
+          })
+          .catch(err => {
+            console.log(err);
+          });
+      }
+    }
+    if (type === 'next') {
+      if (this.state.next) {
+        fetch(this.state.next)
+          .then(resp => {
+            if (resp.ok) return resp.json();
+            else throw new Error('Błąd seci!');
+          })
+          .then(({ results, next, previous }) => {
+            this.setState({
+              people: results,
+              next: next,
+              prev: previous
+            });
+          })
+          .catch(err => {
+            console.log(err);
+          });
+      }
+    }
+    return;
+  };
+
   render() {
     return (
       <>
@@ -37,50 +79,16 @@ class People extends Component {
           icon="left arrow"
           labelPosition="left"
           size="mini"
-          onClick={() => {
-            if (this.state.prev) {
-              fetch(this.state.prev)
-                .then(resp => {
-                  if (resp.ok) return resp.json();
-                  else throw new Error('Błąd seci!');
-                })
-                .then(({ results, next, previous }) => {
-                  this.setState({
-                    people: results,
-                    next: next,
-                    prev: previous
-                  });
-                })
-                .catch(err => {
-                  console.log(err);
-                });
-            }
-          }}
+          onClick={() => this.handleButton('previous')}
+          disabled={this.state.prev !== null ? false : true}
         />
         <Button
           content="Next"
           icon="right arrow"
           labelPosition="right"
           size="mini"
-          onClick={() => {
-            if (this.state.next) {
-              fetch(this.state.next)
-                .then(resp => {
-                  if (resp.ok) return resp.json();
-                  else throw new Error('Błąd seci!');
-                })
-                .then(({ results, next, previous }) => {
-                  this.setState({
-                    people: results,
-                    next: next,
-                    prev: previous
-                  });
-                })
-                .catch(err => {
-                  console.log(err);
-                });
-            }
-          }}
+          onClick={() => this.handleButton('next')}
+          disabled={this.state.next !== null ? false : true}
         />
         <hr />
         <Card.Group>

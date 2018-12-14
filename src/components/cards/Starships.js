@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Buttons from '../elements/Buttons';
-import { Card, Button } from 'semantic-ui-react';
+import { Card } from 'semantic-ui-react';
 import 'semantic-ui-css/semantic.min.css';
 
 class Starships extends Component {
