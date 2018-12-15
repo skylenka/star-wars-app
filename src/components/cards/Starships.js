@@ -38,7 +38,7 @@ class Starships extends Component {
         })
         .then(({ results, next, previous }) => {
           this.setState({
-            people: results,
+            starships: results,
             next: next,
             prev: previous
           });
@@ -59,7 +59,7 @@ class Starships extends Component {
         })
         .then(({ results, next, previous }) => {
           this.setState({
-            people: results,
+            starships: results,
             next: next,
             prev: previous
           });
