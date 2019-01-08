@@ -10,27 +10,9 @@ class Starships extends Component {
     starships: []
   };
 
-  componentDidMount() {
-    fetch(this.state.curr)
-      .then(resp => {
-        if (resp.ok) return resp.json();
-        else throw new Error('Błąd seci!');
-      })
-      .then(({ results, next, previous }) => {
-        this.setState({
-          starships: results,
-          next: next,
-          prev: previous
-        });
-      })
-      .catch(err => {
-        console.log(err);
-      });
-  }
-
-  handlePrevButton = () => {
-    if (this.state.prev) {
-      fetch(this.state.prev)
+  handleRespond = link => {
+    if (link) {
+      fetch(link)
         .then(resp => {
           if (resp.ok) return resp.json();
           else throw new Error('Błąd seci!');
@@ -49,25 +31,16 @@ class Starships extends Component {
     return;
   };
 
+  componentDidMount() {
+    this.handleRespond(this.state.curr);
+  }
+
+  handlePrevButton = () => {
+    this.handleRespond(this.state.prev);
+  };
+
   handleNextButton = () => {
-    if (this.state.next) {
-      fetch(this.state.next)
-        .then(resp => {
-          if (resp.ok) return resp.json();
-          else throw new Error('Błąd seci!');
-        })
-        .then(({ results, next, previous }) => {
-          this.setState({
-            starships: results,
-            next: next,
-            prev: previous
-          });
-        })
-        .catch(err => {
-          console.log(err);
-        });
-    }
-    return;
+    this.handleRespond(this.state.next);
   };
 
   render() {
