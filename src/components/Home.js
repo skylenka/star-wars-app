@@ -1,10 +1,9 @@
-import React, { Component } from 'react';
-import 'semantic-ui-css/semantic.min.css';
+import React from 'react';
 
-class Home extends Component {
-  render() {
-    return <h2>Home</h2>;
-  }
-}
+const Home = () => (
+  <>
+    <h2>Home</h2>
+  </>
+);
 
 export default Home;
