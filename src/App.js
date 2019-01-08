@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import 'semantic-ui-css/semantic.min.css';
-import Starships from './components/cards/Starships.js';
-import People from './components/cards/People.js';
-import Planet from './components/cards/Planets.js';
-import Home from './components/cards/Home.js';
-import NotFound from './components/cards/NotFound.js';
+import Starships from './components/Starships.js';
+import People from './components/People.js';
+import Planet from './components/Planets.js';
+import Home from './components/Home.js';
+import NotFound from './components/NotFound.js';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import { Menu } from 'semantic-ui-react';
 

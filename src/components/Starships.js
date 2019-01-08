@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import Buttons from '../elements/Buttons';
+import Buttons from './Buttons';
 import { Card } from 'semantic-ui-react';
-import 'semantic-ui-css/semantic.min.css';
 
 class Starships extends Component {
   state = {
@@ -78,8 +77,8 @@ class Starships extends Component {
         <Buttons
           prev={this.state.prev}
           next={this.state.next}
-          fnprev={this.handlePrevButton}
-          fnnext={this.handleNextButton}
+          fnPrev={this.handlePrevButton}
+          fnNext={this.handleNextButton}
         />
 
         <hr />
