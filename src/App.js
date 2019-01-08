@@ -5,7 +5,7 @@ import People from './components/People.js';
 import Planet from './components/Planets.js';
 import Home from './components/Home.js';
 import NotFound from './components/NotFound.js';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 import { Menu } from 'semantic-ui-react';
 
 const MenuLink = ({ name, to, activeOnlyWhenExact }) => (
@@ -30,14 +30,13 @@ const App = () => (
           <MenuLink name="people" as={Link} to="/people" />
           <MenuLink name="planets" as={Link} to="/planets" />
         </Menu>
-
-        <hr />
-
-        <Route exact path="/" component={Home} />
-        <Route path="/spacecrafts" component={Starships} />
-        <Route path="/people" component={People} />
-        <Route path="/planets" component={Planet} />
-        <Route path="*" component={NotFound} />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/spacecrafts" component={Starships} />
+          <Route path="/people" component={People} />
+          <Route path="/planets" component={Planet} />
+          <Route path="*" component={NotFound} />
+        </Switch>
       </div>
     </Router>
   </>
