@@ -10,6 +10,7 @@ const Buttons = props => (
       size="mini"
       onClick={() => props.fnPrev()}
       disabled={props.prev !== null ? false : true}
+      style={{ margin: '10px 10px 10px 0px' }}
     />
     <Button
       content="Next"

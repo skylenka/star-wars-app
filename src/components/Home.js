@@ -1,8 +1,11 @@
 import React from 'react';
+import { Container, Header } from 'semantic-ui-react';
 
 const Home = () => (
   <>
-    <h2>Home</h2>
+    <Container fluid>
+      <Header as="h2">Home</Header>
+    </Container>
   </>
 );
 

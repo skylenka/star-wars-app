@@ -10,9 +10,9 @@ const People = () => (
       <Card key={person.url}>
         <Card.Content>
           <Card.Header>{person.name}</Card.Header>
-          <Card.Meta>{person.height}</Card.Meta>
-          <Card.Description>{person.birth_year}</Card.Description>
-          <Card.Description>{person.gender}</Card.Description>
+          <Card.Meta>Height: {person.height}</Card.Meta>
+          <Card.Description>Birth: {person.birth_year}</Card.Description>
+          <Card.Description>Gender: {person.gender}</Card.Description>
         </Card.Content>
       </Card>
     )}

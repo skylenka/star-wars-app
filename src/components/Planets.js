@@ -10,9 +10,9 @@ const Planet = () => (
       <Card key={planet.url}>
         <Card.Content>
           <Card.Header>{planet.name}</Card.Header>
-          <Card.Meta>{planet.climate}</Card.Meta>
-          <Card.Description>{planet.gravity}</Card.Description>
-          <Card.Description>{planet.terrain}</Card.Description>
+          <Card.Meta>Climate: {planet.climate}</Card.Meta>
+          <Card.Description>Gravity: {planet.gravity}</Card.Description>
+          <Card.Description>Terrain: {planet.terrain}</Card.Description>
         </Card.Content>
       </Card>
     )}

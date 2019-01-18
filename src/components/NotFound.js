@@ -1,10 +1,12 @@
-import React, { Component } from 'react';
-import 'semantic-ui-css/semantic.min.css';
+import React from 'react';
+import { Container, Header } from 'semantic-ui-react';
 
-class NotFound extends Component {
-  render() {
-    return <h2>404</h2>;
-  }
-}
+const NotFound = () => (
+  <>
+    <Container fluid>
+      <Header as="h2">404</Header>
+    </Container>
+  </>
+);
 
 export default NotFound;
