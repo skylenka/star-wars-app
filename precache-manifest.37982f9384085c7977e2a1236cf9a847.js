@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/star-wars-app/static/media/icons.faff9214.woff"
   },
   {
-    "revision": "95f9e8bd0d4b2988cea7",
+    "revision": "06ea2285e5509e9a1195",
     "url": "/star-wars-app/static/css/main.c4861cb3.chunk.css"
   },
   {
@@ -20,12 +20,12 @@ self.__precacheManifest = [
     "url": "/star-wars-app/static/js/runtime~main.47f42d09.js"
   },
   {
-    "revision": "ef60a4f6c25ef7f39f2d25a748dbecfe",
-    "url": "/star-wars-app/static/media/outline-icons.ef60a4f6.woff"
-  },
-  {
     "revision": "cd6c777f1945164224dee082abaea03a",
     "url": "/star-wars-app/static/media/outline-icons.cd6c777f.woff2"
+  },
+  {
+    "revision": "ef60a4f6c25ef7f39f2d25a748dbecfe",
+    "url": "/star-wars-app/static/media/outline-icons.ef60a4f6.woff"
   },
   {
     "revision": "9c74e172f87984c48ddf5c8108cabe67",
@@ -44,8 +44,8 @@ self.__precacheManifest = [
     "url": "/star-wars-app/static/media/icons.0ab54153.woff2"
   },
   {
-    "revision": "95f9e8bd0d4b2988cea7",
-    "url": "/star-wars-app/static/js/main.95f9e8bd.chunk.js"
+    "revision": "06ea2285e5509e9a1195",
+    "url": "/star-wars-app/static/js/main.06ea2285.chunk.js"
   },
   {
     "revision": "e8c322de9658cbeb8a774b6624167c2c",
@@ -60,12 +60,12 @@ self.__precacheManifest = [
     "url": "/star-wars-app/static/media/icons.8e3c7f55.eot"
   },
   {
-    "revision": "13db00b7a34fee4d819ab7f9838cc428",
-    "url": "/star-wars-app/static/media/brand-icons.13db00b7.eot"
-  },
-  {
     "revision": "b87b9ba532ace76ae9f6edfe9f72ded2",
     "url": "/star-wars-app/static/media/icons.b87b9ba5.ttf"
+  },
+  {
+    "revision": "13db00b7a34fee4d819ab7f9838cc428",
+    "url": "/star-wars-app/static/media/brand-icons.13db00b7.eot"
   },
   {
     "revision": "c5ebe0b32dc1b5cc449a76c4204d13bb",
@@ -84,7 +84,7 @@ self.__precacheManifest = [
     "url": "/star-wars-app/static/css/1.9450c865.chunk.css"
   },
   {
-    "revision": "9d916b010fedfdab359a28727db39c18",
+    "revision": "86f5bc63b4bb2abbbfa0dddc95ee8a1c",
     "url": "/star-wars-app/index.html"
   }
 ];
