@@ -1,11 +1,15 @@
 import React from 'react';
 
 class Details extends React.Component {
-  state = {
-    id: this.props.match.params.id,
-    link: `https://swapi.co/api/people/${this.props.match.params.id}`,
-    content: null
-  };
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      id: props.match.params.id,
+      link: `https://swapi.co/api/people/${props.match.params.id}`,
+      content: null
+    };
+  }
 
   componentDidMount() {
     fetch(this.state.link)
