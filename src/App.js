@@ -46,7 +46,7 @@ const App = () => (
           <Route path="/people" component={People} />
           <Route path="/planets" component={Planet} />
           <Route path="/test" component={Test} />
-          <Route path="/:id" component={Details} />
+          <Route path="/details/:id" component={Details} />
           <Route path="*" component={NotFound} />
         </Switch>
       </div>

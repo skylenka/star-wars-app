@@ -17,7 +17,9 @@ const Test = ({ match }) => (
         </Card.Content>
         <Card.Content extra>
           <div>
-            <Link to={person.url.match(/\/api\/(.*)/)[1]}>Read more</Link>
+            <Link to={`details/${person.url.match(/\/api\/(.*)/)[1]}`}>
+              Read more
+            </Link>
           </div>
         </Card.Content>
       </Card>
