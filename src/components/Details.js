@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Feed } from 'semantic-ui-react';
+import { Card, Feed, Icon } from 'semantic-ui-react';
 
 class Details extends React.Component {
   constructor(props) {
@@ -23,13 +23,17 @@ class Details extends React.Component {
   render() {
     return (
       <>
-        <Card>
+        <Card style={{ width: 'auto' }}>
           <Card.Content>
             <Card.Header>{this.state.content.name}</Card.Header>
           </Card.Content>
           <Card.Content>
             <Feed>
               <Feed.Event>
+                <Feed.Label>
+                  <Icon disabled name="text height" />
+                </Feed.Label>
+
                 <Feed.Content>
                   <Feed.Date content="Height:" />
                   <Feed.Summary>{this.state.content.height}</Feed.Summary>
@@ -37,6 +41,9 @@ class Details extends React.Component {
               </Feed.Event>
 
               <Feed.Event>
+                <Feed.Label>
+                  <Icon disabled name="weight" />
+                </Feed.Label>
                 <Feed.Content>
                   <Feed.Date content="Mass:" />
                   <Feed.Summary>{this.state.content.mass}</Feed.Summary>
@@ -44,42 +51,63 @@ class Details extends React.Component {
               </Feed.Event>
 
               <Feed.Event>
+                <Feed.Label>
+                  <Icon disabled name="arrow alternate circle right outline" />
+                </Feed.Label>
                 <Feed.Content>
                   <Feed.Date content="Hair color:" />
                   <Feed.Summary>{this.state.content.hair_color}</Feed.Summary>
                 </Feed.Content>
               </Feed.Event>
               <Feed.Event>
+                <Feed.Label>
+                  <Icon disabled name="arrow alternate circle right" />
+                </Feed.Label>
                 <Feed.Content>
                   <Feed.Date content="Skin color:" />
                   <Feed.Summary>{this.state.content.skin_color}</Feed.Summary>
                 </Feed.Content>
               </Feed.Event>
               <Feed.Event>
+                <Feed.Label>
+                  <Icon disabled name="arrow alternate circle right outline" />
+                </Feed.Label>
                 <Feed.Content>
                   <Feed.Date content="Eye color:" />
                   <Feed.Summary>{this.state.content.eye_color}</Feed.Summary>
                 </Feed.Content>
               </Feed.Event>
               <Feed.Event>
+                <Feed.Label>
+                  <Icon disabled name="birthday" />
+                </Feed.Label>
                 <Feed.Content>
                   <Feed.Date content="Birth:" />
                   <Feed.Summary>{this.state.content.birth_year}</Feed.Summary>
                 </Feed.Content>
               </Feed.Event>
               <Feed.Event>
+                <Feed.Label>
+                  <Icon disabled name="genderless" />
+                </Feed.Label>
                 <Feed.Content>
-                  <Feed.Date content="Male:" />
+                  <Feed.Date content="Gender:" />
                   <Feed.Summary>{this.state.content.gender}</Feed.Summary>
                 </Feed.Content>
               </Feed.Event>
               <Feed.Event>
+                <Feed.Label>
+                  <Icon disabled name="home" />
+                </Feed.Label>
                 <Feed.Content>
                   <Feed.Date content="Homeworld:" />
                   <Feed.Summary>{this.state.content.homeworld}</Feed.Summary>
                 </Feed.Content>
               </Feed.Event>
               <Feed.Event>
+                <Feed.Label>
+                  <Icon disabled name="film" />
+                </Feed.Label>
                 <Feed.Content>
                   <Feed.Date content="Films:" />
                   <Feed.Summary>
@@ -94,12 +122,18 @@ class Details extends React.Component {
                 </Feed.Content>
               </Feed.Event>
               <Feed.Event>
+                <Feed.Label>
+                  <Icon disabled name="arrow alternate circle right outline" />
+                </Feed.Label>
                 <Feed.Content>
                   <Feed.Date content="Species:" />
                   <Feed.Summary>{this.state.content.species}</Feed.Summary>
                 </Feed.Content>
               </Feed.Event>
               <Feed.Event>
+                <Feed.Label>
+                  <Icon disabled name="car" />
+                </Feed.Label>
                 <Feed.Content>
                   <Feed.Date content="Vehicles:" />
                   <Feed.Summary>
@@ -114,6 +148,9 @@ class Details extends React.Component {
                 </Feed.Content>
               </Feed.Event>
               <Feed.Event>
+                <Feed.Label>
+                  <Icon disabled name="ship" />
+                </Feed.Label>
                 <Feed.Content>
                   <Feed.Date content="Starships:" />
                   <Feed.Summary>
@@ -128,18 +165,27 @@ class Details extends React.Component {
                 </Feed.Content>
               </Feed.Event>
               <Feed.Event>
+                <Feed.Label>
+                  <Icon disabled name="external square alternate" />
+                </Feed.Label>
                 <Feed.Content>
                   <Feed.Date content="Created:" />
                   <Feed.Summary>{this.state.content.created}</Feed.Summary>
                 </Feed.Content>
               </Feed.Event>
               <Feed.Event>
+                <Feed.Label>
+                  <Icon disabled name="edit" />
+                </Feed.Label>
                 <Feed.Content>
                   <Feed.Date content="Edited:" />
                   <Feed.Summary>{this.state.content.edited}</Feed.Summary>
                 </Feed.Content>
               </Feed.Event>
               <Feed.Event>
+                <Feed.Label>
+                  <Icon disabled name="sync" />
+                </Feed.Label>
                 <Feed.Content>
                   <Feed.Date content="URL:" />
                   <Feed.Summary>{this.state.content.url}</Feed.Summary>
