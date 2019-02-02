@@ -6,7 +6,7 @@ class Details extends React.Component {
 
     this.state = {
       id: props.match.params.id,
-      link: `https://swapi.co/api/people/${props.match.params.id}`,
+      link: `https://swapi.co/api/people/${props.match.params.id}/`,
       content: null
     };
   }
@@ -14,13 +14,13 @@ class Details extends React.Component {
   componentDidMount() {
     fetch(this.state.link)
       .then(resp => resp.json())
-      .then(({ results }) => {
-        this.setState({ content: results });
+      .then(resp => {
+        this.setState({ content: resp });
       });
   }
 
   render() {
-    return <p>cokolwiek</p>;
+    return <p>{this.state.content.name}</p>;
   }
 }
 
