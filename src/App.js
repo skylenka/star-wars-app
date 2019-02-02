@@ -28,7 +28,7 @@ const MenuLink = ({ name, to, activeOnlyWhenExact }) => (
   />
 );
 
-const App = ({ match }) => (
+const App = () => (
   <>
     <Router>
       <div style={{ margin: '10px' }}>
@@ -45,8 +45,8 @@ const App = ({ match }) => (
           <Route path="/starchips" component={Starships} />
           <Route path="/people" component={People} />
           <Route path="/planets" component={Planet} />
-          <Route path="/details" component={Details} />
           <Route path="/test" component={Test} />
+          <Route path="/:id" component={Details} />
           <Route path="*" component={NotFound} />
         </Switch>
       </div>

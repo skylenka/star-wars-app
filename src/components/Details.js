@@ -1,5 +1,5 @@
 import React from 'react';
 
-const Details = () => <p>coś</p>;
+const Details = ({ match }) => <h3>ID: {match.params.id}</h3>;
 
 export default Details;
