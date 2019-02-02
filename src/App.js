@@ -5,7 +5,6 @@ import People from './components/People.js';
 import Planet from './components/Planets.js';
 import Home from './components/Home.js';
 import Details from './components/Details.js';
-import Test from './components/Test.js';
 import NotFound from './components/NotFound.js';
 import {
   BrowserRouter as Router,
@@ -37,7 +36,6 @@ const App = () => (
           <MenuLink name="Starschips" as={Link} to="/starchips" />
           <MenuLink name="People" as={Link} to="/people" />
           <MenuLink name="Planets" as={Link} to="/planets" />
-          <MenuLink name="Test" as={Link} to="/test" />
         </Menu>
         <Switch>
           <Route exact path="/" component={Home} />
@@ -45,7 +43,6 @@ const App = () => (
           <Route path="/starchips" component={Starships} />
           <Route path="/people" component={People} />
           <Route path="/planets" component={Planet} />
-          <Route path="/test" component={Test} />
           <Route path="/details/people/:id?" component={Details} />
           <Route path="*" component={NotFound} />
         </Switch>
