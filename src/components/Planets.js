@@ -1,6 +1,7 @@
 import React from 'react';
 import ListRenderer from './ListRenderer';
 import { Card } from 'semantic-ui-react';
+import { Link } from 'react-router-dom';
 
 const Planet = () => (
   <ListRenderer
@@ -13,6 +14,13 @@ const Planet = () => (
           <Card.Meta>Climate: {planet.climate}</Card.Meta>
           <Card.Description>Gravity: {planet.gravity}</Card.Description>
           <Card.Description>Terrain: {planet.terrain}</Card.Description>
+        </Card.Content>
+        <Card.Content extra>
+          <div>
+            <Link to={`details/${planet.url.match(/\/api\/(.*)/)[1]}`}>
+              Read more
+            </Link>
+          </div>
         </Card.Content>
       </Card>
     )}

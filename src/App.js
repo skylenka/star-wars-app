@@ -4,7 +4,10 @@ import Starships from './components/Starships.js';
 import People from './components/People.js';
 import Planet from './components/Planets.js';
 import Home from './components/Home.js';
-import Details from './components/Details.js';
+import PeopleDetails from './components/PeopleDetails.js';
+import PlanetsDetails from './components/PlanetsDetails.js';
+import StarshipsDetails from './components/StarshipsDetails.js';
+
 import NotFound from './components/NotFound.js';
 import {
   BrowserRouter as Router,
@@ -43,7 +46,10 @@ const App = () => (
           <Route path="/starchips" component={Starships} />
           <Route path="/people" component={People} />
           <Route path="/planets" component={Planet} />
-          <Route path="/details/people/:id?" component={Details} />
+          <Route path="/details/people/:id?" component={PeopleDetails} />
+          <Route path="/details/planets/:id?" component={PlanetsDetails} />
+          <Route path="/details/starships/:id?" component={StarshipsDetails} />
+
           <Route path="*" component={NotFound} />
         </Switch>
       </div>

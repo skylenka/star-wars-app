@@ -2,13 +2,13 @@ import React from 'react';
 import { Card, Feed, Icon } from 'semantic-ui-react';
 import ExtraCard from './ExtraCard';
 
-class Details extends React.Component {
+class PeopleDetails extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
       id: props.match.params.id,
-      link: `https://swapi.co/api/people/${props.match.params.id}/`,
+      link: `https://swapi.co/api/planets/${props.match.params.id}/`,
       content: {}
     };
   }
@@ -36,8 +36,10 @@ class Details extends React.Component {
                 </Feed.Label>
 
                 <Feed.Content>
-                  <Feed.Date content="Height:" />
-                  <Feed.Summary>{this.state.content.height}</Feed.Summary>
+                  <Feed.Date content="Rotation period:" />
+                  <Feed.Summary>
+                    {this.state.content.rotation_period}
+                  </Feed.Summary>
                 </Feed.Content>
               </Feed.Event>
 
@@ -46,8 +48,10 @@ class Details extends React.Component {
                   <Icon disabled name="weight" />
                 </Feed.Label>
                 <Feed.Content>
-                  <Feed.Date content="Mass:" />
-                  <Feed.Summary>{this.state.content.mass}</Feed.Summary>
+                  <Feed.Date content="Orbital period:" />
+                  <Feed.Summary>
+                    {this.state.content.orbital_period}
+                  </Feed.Summary>
                 </Feed.Content>
               </Feed.Event>
 
@@ -56,8 +60,8 @@ class Details extends React.Component {
                   <Icon disabled name="arrow alternate circle right outline" />
                 </Feed.Label>
                 <Feed.Content>
-                  <Feed.Date content="Hair color:" />
-                  <Feed.Summary>{this.state.content.hair_color}</Feed.Summary>
+                  <Feed.Date content="Diameter:" />
+                  <Feed.Summary>{this.state.content.diameter}</Feed.Summary>
                 </Feed.Content>
               </Feed.Event>
               <Feed.Event>
@@ -65,8 +69,8 @@ class Details extends React.Component {
                   <Icon disabled name="arrow alternate circle right" />
                 </Feed.Label>
                 <Feed.Content>
-                  <Feed.Date content="Skin color:" />
-                  <Feed.Summary>{this.state.content.skin_color}</Feed.Summary>
+                  <Feed.Date content="Climate:" />
+                  <Feed.Summary>{this.state.content.climate}</Feed.Summary>
                 </Feed.Content>
               </Feed.Event>
               <Feed.Event>
@@ -74,8 +78,8 @@ class Details extends React.Component {
                   <Icon disabled name="arrow alternate circle right outline" />
                 </Feed.Label>
                 <Feed.Content>
-                  <Feed.Date content="Eye color:" />
-                  <Feed.Summary>{this.state.content.eye_color}</Feed.Summary>
+                  <Feed.Date content="Gravity:" />
+                  <Feed.Summary>{this.state.content.gravity}</Feed.Summary>
                 </Feed.Content>
               </Feed.Event>
               <Feed.Event>
@@ -83,8 +87,8 @@ class Details extends React.Component {
                   <Icon disabled name="birthday" />
                 </Feed.Label>
                 <Feed.Content>
-                  <Feed.Date content="Birth:" />
-                  <Feed.Summary>{this.state.content.birth_year}</Feed.Summary>
+                  <Feed.Date content="Terrain:" />
+                  <Feed.Summary>{this.state.content.terrain}</Feed.Summary>
                 </Feed.Content>
               </Feed.Event>
               <Feed.Event>
@@ -92,26 +96,41 @@ class Details extends React.Component {
                   <Icon disabled name="genderless" />
                 </Feed.Label>
                 <Feed.Content>
-                  <Feed.Date content="Gender:" />
-                  <Feed.Summary>{this.state.content.gender}</Feed.Summary>
+                  <Feed.Date content="Surface water:" />
+                  <Feed.Summary>
+                    {this.state.content.surface_water}
+                  </Feed.Summary>
                 </Feed.Content>
               </Feed.Event>
               <Feed.Event>
                 <Feed.Label>
-                  <Icon disabled name="home" />
+                  <Icon disabled name="genderless" />
                 </Feed.Label>
                 <Feed.Content>
-                  <Feed.Date content="Homeworld:" />
-                  {this.state.content.homeworld ? (
-                    <ExtraCard link={this.state.content.homeworld} />
-                  ) : (
-                    ''
-                  )}
+                  <Feed.Date content="Population:" />
+                  <Feed.Summary>{this.state.content.population}</Feed.Summary>
                 </Feed.Content>
               </Feed.Event>
+
               <Feed.Event>
                 <Feed.Label>
                   <Icon disabled name="film" />
+                </Feed.Label>
+                <Feed.Content>
+                  <Feed.Date content="Residents:" />
+                  <Feed.Summary>
+                    {this.state.content.residents
+                      ? this.state.content.residents.map((el, i) => (
+                          <ExtraCard link={el} />
+                        ))
+                      : ''}
+                  </Feed.Summary>
+                </Feed.Content>
+              </Feed.Event>
+
+              <Feed.Event>
+                <Feed.Label>
+                  <Icon disabled name="car" />
                 </Feed.Label>
                 <Feed.Content>
                   <Feed.Date content="Films:" />
@@ -124,51 +143,7 @@ class Details extends React.Component {
                   </Feed.Summary>
                 </Feed.Content>
               </Feed.Event>
-              <Feed.Event>
-                <Feed.Label>
-                  <Icon disabled name="arrow alternate circle right outline" />
-                </Feed.Label>
-                <Feed.Content>
-                  <Feed.Date content="Species:" />
-                  <Feed.Summary>
-                    {this.state.content.species ? (
-                      <ExtraCard link={this.state.content.species} />
-                    ) : (
-                      ''
-                    )}
-                  </Feed.Summary>
-                </Feed.Content>
-              </Feed.Event>
-              <Feed.Event>
-                <Feed.Label>
-                  <Icon disabled name="car" />
-                </Feed.Label>
-                <Feed.Content>
-                  <Feed.Date content="Vehicles:" />
-                  <Feed.Summary>
-                    {this.state.content.vehicles
-                      ? this.state.content.vehicles.map((el, i) => (
-                          <ExtraCard link={el} />
-                        ))
-                      : ''}
-                  </Feed.Summary>
-                </Feed.Content>
-              </Feed.Event>
-              <Feed.Event>
-                <Feed.Label>
-                  <Icon disabled name="ship" />
-                </Feed.Label>
-                <Feed.Content>
-                  <Feed.Date content="Starships:" />
-                  <Feed.Summary>
-                    {this.state.content.starships
-                      ? this.state.content.starships.map((el, i) => (
-                          <ExtraCard link={el} />
-                        ))
-                      : ''}
-                  </Feed.Summary>
-                </Feed.Content>
-              </Feed.Event>
+
               <Feed.Event>
                 <Feed.Label>
                   <Icon disabled name="external square alternate" />
@@ -204,4 +179,4 @@ class Details extends React.Component {
   }
 }
 
-export default Details;
+export default PeopleDetails;
