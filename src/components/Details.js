@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, Feed, Icon } from 'semantic-ui-react';
+import ExtraCard from './ExtraCard';
 
 class Details extends React.Component {
   constructor(props) {
@@ -101,7 +102,11 @@ class Details extends React.Component {
                 </Feed.Label>
                 <Feed.Content>
                   <Feed.Date content="Homeworld:" />
-                  <Feed.Summary>{this.state.content.homeworld}</Feed.Summary>
+                  {this.state.content.homeworld ? (
+                    <ExtraCard link={this.state.content.homeworld} />
+                  ) : (
+                    ''
+                  )}
                 </Feed.Content>
               </Feed.Event>
               <Feed.Event>
@@ -113,9 +118,7 @@ class Details extends React.Component {
                   <Feed.Summary>
                     {this.state.content.films
                       ? this.state.content.films.map((el, i) => (
-                          <ul>
-                            <li>{el}</li>
-                          </ul>
+                          <ExtraCard link={el} />
                         ))
                       : ''}
                   </Feed.Summary>
@@ -127,7 +130,13 @@ class Details extends React.Component {
                 </Feed.Label>
                 <Feed.Content>
                   <Feed.Date content="Species:" />
-                  <Feed.Summary>{this.state.content.species}</Feed.Summary>
+                  <Feed.Summary>
+                    {this.state.content.species ? (
+                      <ExtraCard link={this.state.content.species} />
+                    ) : (
+                      ''
+                    )}
+                  </Feed.Summary>
                 </Feed.Content>
               </Feed.Event>
               <Feed.Event>
@@ -139,9 +148,7 @@ class Details extends React.Component {
                   <Feed.Summary>
                     {this.state.content.vehicles
                       ? this.state.content.vehicles.map((el, i) => (
-                          <ul>
-                            <li>{el}</li>
-                          </ul>
+                          <ExtraCard link={el} />
                         ))
                       : ''}
                   </Feed.Summary>
@@ -156,9 +163,7 @@ class Details extends React.Component {
                   <Feed.Summary>
                     {this.state.content.starships
                       ? this.state.content.starships.map((el, i) => (
-                          <ul>
-                            <li>{el}</li>
-                          </ul>
+                          <ExtraCard link={el} />
                         ))
                       : ''}
                   </Feed.Summary>
