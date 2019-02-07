@@ -6,8 +6,8 @@ import swlogo from '../logosw.png';
 const Home = () => (
   <>
     <Container fluid>
-      <Image src={swlogo} size="small" />
-      <Image src={logo} size="small" />
+      <Image src={swlogo} size="small" centered />
+      <Image src={logo} size="small" centered />
     </Container>
   </>
 );
