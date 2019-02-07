@@ -193,7 +193,12 @@ class PeopleDetails extends React.Component {
             </Feed>
           </Card.Content>
         </Card>
-        <Button color="violet" as={Link} to="/people">
+        <Button
+          color="violet"
+          as={Link}
+          to="/people"
+          style={{ margin: '0 0 10px 0' }}
+        >
           Go back
         </Button>
       </>

@@ -223,7 +223,12 @@ class StarshipsDetails extends React.Component {
             </Feed>
           </Card.Content>
         </Card>
-        <Button color="violet" as={Link} to="/starships">
+        <Button
+          color="violet"
+          as={Link}
+          to="/starships"
+          style={{ margin: '0 0 10px 0' }}
+        >
           Go back
         </Button>
       </>

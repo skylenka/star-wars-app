@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Header, Image } from 'semantic-ui-react';
+import { Container, Image } from 'semantic-ui-react';
 import logo from '../logo.svg';
 import swlogo from '../logosw.png';
 
