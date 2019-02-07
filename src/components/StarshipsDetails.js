@@ -1,5 +1,6 @@
 import React from 'react';
-import { Card, Feed, Icon } from 'semantic-ui-react';
+import { Card, Feed, Icon, Button } from 'semantic-ui-react';
+import { Link } from 'react-router-dom';
 import ExtraCard from './ExtraCard';
 
 class StarshipsDetails extends React.Component {
@@ -222,6 +223,9 @@ class StarshipsDetails extends React.Component {
             </Feed>
           </Card.Content>
         </Card>
+        <Button color="violet" as={Link} to="/starships">
+          Go back
+        </Button>
       </>
     );
   }

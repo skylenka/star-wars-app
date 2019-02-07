@@ -1,5 +1,6 @@
 import React from 'react';
-import { Card, Feed, Icon } from 'semantic-ui-react';
+import { Card, Feed, Icon, Button } from 'semantic-ui-react';
+import { Link } from 'react-router-dom';
 import ExtraCard from './ExtraCard';
 
 class PeopleDetails extends React.Component {
@@ -172,6 +173,9 @@ class PeopleDetails extends React.Component {
             </Feed>
           </Card.Content>
         </Card>
+        <Button color="violet" as={Link} to="/planets">
+          Go back
+        </Button>
       </>
     );
   }

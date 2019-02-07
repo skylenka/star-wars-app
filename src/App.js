@@ -36,14 +36,14 @@ const App = () => (
       <div style={{ margin: '10px' }}>
         <Menu>
           <MenuLink activeOnlyWhenExact={true} name="Home" as={Link} to="/" />
-          <MenuLink name="Starschips" as={Link} to="/starchips" />
+          <MenuLink name="Starships" as={Link} to="/starships" />
           <MenuLink name="People" as={Link} to="/people" />
           <MenuLink name="Planets" as={Link} to="/planets" />
         </Menu>
         <Switch>
           <Route exact path="/" component={Home} />
           <Redirect from="/star-wars-app" to="/" />
-          <Route path="/starchips" component={Starships} />
+          <Route path="/starships" component={Starships} />
           <Route path="/people" component={People} />
           <Route path="/planets" component={Planet} />
           <Route path="/details/people/:id?" component={PeopleDetails} />
