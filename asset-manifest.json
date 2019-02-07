@@ -1,16 +1,16 @@
 {
   "main.css": "/star-wars-app/static/css/main.3828f55e.chunk.css",
-  "main.js": "/star-wars-app/static/js/main.1ab4dd79.chunk.js",
-  "main.js.map": "/star-wars-app/static/js/main.1ab4dd79.chunk.js.map",
+  "main.js": "/star-wars-app/static/js/main.3bb3c8b9.chunk.js",
+  "main.js.map": "/star-wars-app/static/js/main.3bb3c8b9.chunk.js.map",
   "static/css/1.f7f973c5.chunk.css": "/star-wars-app/static/css/1.f7f973c5.chunk.css",
-  "static/js/1.8c94292f.chunk.js": "/star-wars-app/static/js/1.8c94292f.chunk.js",
-  "static/js/1.8c94292f.chunk.js.map": "/star-wars-app/static/js/1.8c94292f.chunk.js.map",
+  "static/js/1.82bd26c2.chunk.js": "/star-wars-app/static/js/1.82bd26c2.chunk.js",
+  "static/js/1.82bd26c2.chunk.js.map": "/star-wars-app/static/js/1.82bd26c2.chunk.js.map",
   "runtime~main.js": "/star-wars-app/static/js/runtime~main.47f42d09.js",
   "runtime~main.js.map": "/star-wars-app/static/js/runtime~main.47f42d09.js.map",
   "static/media/semantic.min.css": "/star-wars-app/static/media/brand-icons.a1a749e8.svg",
-  "static/css/main.3828f55e.chunk.css.map": "/star-wars-app/static/css/main.3828f55e.chunk.css.map",
   "static/css/1.f7f973c5.chunk.css.map": "/star-wars-app/static/css/1.f7f973c5.chunk.css.map",
+  "static/css/main.3828f55e.chunk.css.map": "/star-wars-app/static/css/main.3828f55e.chunk.css.map",
   "index.html": "/star-wars-app/index.html",
-  "precache-manifest.1e132c62a03acd7eb1c2b816e29a2ce1.js": "/star-wars-app/precache-manifest.1e132c62a03acd7eb1c2b816e29a2ce1.js",
+  "precache-manifest.bbf889eda03933109ba90da3f3358f73.js": "/star-wars-app/precache-manifest.bbf889eda03933109ba90da3f3358f73.js",
   "service-worker.js": "/star-wars-app/service-worker.js"
 }
