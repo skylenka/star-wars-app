@@ -169,11 +169,10 @@ class StarshipsDetails extends React.Component {
                 <Feed.Content>
                   <Feed.Date content="Pilots:" />
                   <Feed.Summary>
-                    {this.state.content.pilots
-                      ? this.state.content.pilots.map((el, i) => (
-                          <ExtraCard link={el} />
-                        ))
-                      : ''}
+                    {this.state.content.pilots != null &&
+                      this.state.content.pilots.map((el, i) => (
+                        <ExtraCard link={el} />
+                      ))}
                   </Feed.Summary>
                 </Feed.Content>
               </Feed.Event>
@@ -185,11 +184,10 @@ class StarshipsDetails extends React.Component {
                 <Feed.Content>
                   <Feed.Date content="Films:" />
                   <Feed.Summary>
-                    {this.state.content.films
-                      ? this.state.content.films.map((el, i) => (
-                          <ExtraCard link={el} />
-                        ))
-                      : ''}
+                    {this.state.content.films != null &&
+                      this.state.content.films.map((el, i) => (
+                        <ExtraCard link={el} />
+                      ))}
                   </Feed.Summary>
                 </Feed.Content>
               </Feed.Event>

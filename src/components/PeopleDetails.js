@@ -102,10 +102,8 @@ class PeopleDetails extends React.Component {
                 </Feed.Label>
                 <Feed.Content>
                   <Feed.Date content="Homeworld:" />
-                  {this.state.content.homeworld ? (
+                  {this.state.content.homeworld != null && (
                     <ExtraCard link={this.state.content.homeworld} />
-                  ) : (
-                    ''
                   )}
                 </Feed.Content>
               </Feed.Event>
@@ -116,11 +114,10 @@ class PeopleDetails extends React.Component {
                 <Feed.Content>
                   <Feed.Date content="Films:" />
                   <Feed.Summary>
-                    {this.state.content.films
-                      ? this.state.content.films.map((el, i) => (
-                          <ExtraCard link={el} />
-                        ))
-                      : ''}
+                    {this.state.content.films != null &&
+                      this.state.content.films.map((el, i) => (
+                        <ExtraCard link={el} />
+                      ))}
                   </Feed.Summary>
                 </Feed.Content>
               </Feed.Event>
@@ -131,10 +128,8 @@ class PeopleDetails extends React.Component {
                 <Feed.Content>
                   <Feed.Date content="Species:" />
                   <Feed.Summary>
-                    {this.state.content.species ? (
+                    {this.state.content.species != null && (
                       <ExtraCard link={this.state.content.species} />
-                    ) : (
-                      ''
                     )}
                   </Feed.Summary>
                 </Feed.Content>
@@ -146,11 +141,10 @@ class PeopleDetails extends React.Component {
                 <Feed.Content>
                   <Feed.Date content="Vehicles:" />
                   <Feed.Summary>
-                    {this.state.content.vehicles
-                      ? this.state.content.vehicles.map((el, i) => (
-                          <ExtraCard link={el} />
-                        ))
-                      : ''}
+                    {this.state.content.vehicles != null &&
+                      this.state.content.vehicles.map((el, i) => (
+                        <ExtraCard link={el} />
+                      ))}
                   </Feed.Summary>
                 </Feed.Content>
               </Feed.Event>
@@ -161,11 +155,10 @@ class PeopleDetails extends React.Component {
                 <Feed.Content>
                   <Feed.Date content="Starships:" />
                   <Feed.Summary>
-                    {this.state.content.starships
-                      ? this.state.content.starships.map((el, i) => (
-                          <ExtraCard link={el} />
-                        ))
-                      : ''}
+                    {this.state.content.starships != null &&
+                      this.state.content.starships.map((el, i) => (
+                        <ExtraCard link={el} />
+                      ))}
                   </Feed.Summary>
                 </Feed.Content>
               </Feed.Event>

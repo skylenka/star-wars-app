@@ -119,11 +119,10 @@ class PeopleDetails extends React.Component {
                 <Feed.Content>
                   <Feed.Date content="Residents:" />
                   <Feed.Summary>
-                    {this.state.content.residents
-                      ? this.state.content.residents.map((el, i) => (
-                          <ExtraCard link={el} />
-                        ))
-                      : ''}
+                    {this.state.content.residents != null &&
+                      this.state.content.residents.map((el, i) => (
+                        <ExtraCard link={el} />
+                      ))}
                   </Feed.Summary>
                 </Feed.Content>
               </Feed.Event>
@@ -135,11 +134,10 @@ class PeopleDetails extends React.Component {
                 <Feed.Content>
                   <Feed.Date content="Films:" />
                   <Feed.Summary>
-                    {this.state.content.films
-                      ? this.state.content.films.map((el, i) => (
-                          <ExtraCard link={el} />
-                        ))
-                      : ''}
+                    {this.state.content.films != null &&
+                      this.state.content.films.map((el, i) => (
+                        <ExtraCard link={el} />
+                      ))}
                   </Feed.Summary>
                 </Feed.Content>
               </Feed.Event>
