@@ -4,6 +4,7 @@ import { Button } from 'semantic-ui-react';
 const Buttons = props => (
   <>
     <Button
+      primary
       content="Prev"
       icon="left arrow"
       labelPosition="left"
@@ -13,6 +14,7 @@ const Buttons = props => (
       style={{ margin: '10px 10px 10px 0px' }}
     />
     <Button
+      secondary
       content="Next"
       icon="right arrow"
       labelPosition="right"
