@@ -34,7 +34,7 @@ const App = () => (
   <>
     <Router>
       <div style={{ margin: '10px' }}>
-        <Menu>
+        <Menu inverted>
           <MenuLink activeOnlyWhenExact={true} name="Home" as={Link} to="/" />
           <MenuLink name="Starships" as={Link} to="/starships" />
           <MenuLink name="People" as={Link} to="/people" />
