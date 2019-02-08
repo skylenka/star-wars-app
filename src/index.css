@@ -12,3 +12,80 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P");
+body {
+  background: #222224;
+}
+
+.🤖 {
+  width: 25vh;
+  height: 25vh;
+  margin-top: -12.5vh;
+  margin-left: -12.5vh;
+  position: absolute;
+  top: 50%;
+  left: -100%;
+  background: #9d9ea2;
+  border-radius: 50%;
+  animation: rotator 2s forwards;
+}
+.🤖:after, .🤖:before {
+  content: "";
+  background: #222224;
+  position: absolute;
+}
+.🤖:after {
+  width: 100%;
+  height: 0.5vh;
+  top: 48%;
+  left: 0;
+}
+.🤖:before {
+  width: 30%;
+  height: 30%;
+  top: 10%;
+  right: 15%;
+  border-radius: 50% 70%;
+}
+
+.後 {
+  color: #9d9ea2;
+  position: absolute;
+  left: 50%;
+  bottom: 10vh;
+  transform: translateX(-50%);
+  font: 5vh Arial, sans-serif;
+  font-family: 'Press Start 2P', cursive;
+}
+.後:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background:white;
+  animation: blockHider 2s forwards;
+}
+
+@keyframes rotator {
+  0% {
+    left: 0;
+    transform: rotate(0);
+  }
+  100% {
+    left: 50%;
+    transform: rotate(360deg);
+  }
+}
+@keyframes blockHider {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
