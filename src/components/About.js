@@ -5,7 +5,7 @@ const NotFound = () => (
   <>
     <Container fluid>
       <Header as="h2" style={{ color: 'white' }}>
-        404
+        About
       </Header>
     </Container>
   </>

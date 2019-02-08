@@ -7,7 +7,8 @@ import Home from './components/Home.js';
 import PeopleDetails from './components/PeopleDetails.js';
 import PlanetsDetails from './components/PlanetsDetails.js';
 import StarshipsDetails from './components/StarshipsDetails.js';
-
+import About from './components/About.js';
+import Contact from './components/Contact.js';
 import NotFound from './components/NotFound.js';
 import {
   BrowserRouter as Router,
@@ -62,7 +63,8 @@ const App = () => (
           <Route path="/details/people/:id?" component={PeopleDetails} />
           <Route path="/details/planets/:id?" component={PlanetsDetails} />
           <Route path="/details/starships/:id?" component={StarshipsDetails} />
-
+          <Route path="/about" component={About} />
+          <Route path="/contact" component={Contact} />
           <Route path="*" component={NotFound} />
         </Switch>
       </div>

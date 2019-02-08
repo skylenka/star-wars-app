@@ -4,8 +4,8 @@ import { Container, Header } from 'semantic-ui-react';
 const NotFound = () => (
   <>
     <Container fluid>
-      <Header as="h2" style={{ color: 'white' }}>
-        404
+      <Header style={{ color: 'white' }} as="h2">
+        Contact
       </Header>
     </Container>
   </>
