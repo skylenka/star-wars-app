@@ -8,8 +8,8 @@ const Home = () => (
     <Container fluid>
       
       <Image src={logo} size="small" centered />
-      <div class="🤖"></div>
-      <div class="後">Star wars</div> 
+      <div className="🤖"></div>
+      <div className="後">Star wars</div> 
     </Container>
   </>
 );
