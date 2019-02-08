@@ -16,7 +16,7 @@ import {
   Switch,
   Redirect
 } from 'react-router-dom';
-import { Menu } from 'semantic-ui-react';
+import { Menu, Dropdown } from 'semantic-ui-react';
 
 const MenuLink = ({ name, to, activeOnlyWhenExact }) => (
   <Route
@@ -36,9 +36,22 @@ const App = () => (
       <div style={{ margin: '10px' }}>
         <Menu inverted>
           <MenuLink activeOnlyWhenExact={true} name="Home" as={Link} to="/" />
-          <MenuLink name="Starships" as={Link} to="/starships" />
-          <MenuLink name="People" as={Link} to="/people" />
-          <MenuLink name="Planets" as={Link} to="/planets" />
+          <Dropdown text="Elements" pointing className="link item">
+            <Dropdown.Menu>
+              <Dropdown.Header>Categories</Dropdown.Header>
+              <Dropdown.Item as={Link} to="/starships">
+                Starships
+              </Dropdown.Item>
+              <Dropdown.Item as={Link} to="/people">
+                People
+              </Dropdown.Item>
+              <Dropdown.Item as={Link} to="/planets">
+                Planets
+              </Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
+          <MenuLink name="About" as={Link} to="/about" />
+          <MenuLink name="Contact" as={Link} to="/contact" />
         </Menu>
         <Switch>
           <Route exact path="/" component={Home} />

@@ -46,7 +46,7 @@ class ListRenderer extends Component {
   render() {
     return (
       <>
-        <h2>{this.props.name}</h2>
+        <h2 style={{ color: 'white' }}>{this.props.name}</h2>
         <Buttons
           prev={this.state.prev}
           next={this.state.next}
