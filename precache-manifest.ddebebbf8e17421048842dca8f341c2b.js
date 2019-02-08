@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/star-wars-app/static/media/icons.faff9214.woff"
   },
   {
-    "revision": "1eaa6482f9480a0cafa1",
+    "revision": "ee277b4ae0554d0303d9",
     "url": "/star-wars-app/static/css/main.204e0fe1.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = [
     "url": "/star-wars-app/static/media/brand-icons.a1a749e8.svg"
   },
   {
-    "revision": "a5b90b405e6cf432216e",
-    "url": "/star-wars-app/static/js/1.a5b90b40.chunk.js"
+    "revision": "dae8044b5e07825a660c",
+    "url": "/star-wars-app/static/js/1.dae8044b.chunk.js"
   },
   {
     "revision": "47f42d09a35e53ea5631",
@@ -44,8 +44,8 @@ self.__precacheManifest = [
     "url": "/star-wars-app/static/media/icons.0ab54153.woff2"
   },
   {
-    "revision": "1eaa6482f9480a0cafa1",
-    "url": "/star-wars-app/static/js/main.1eaa6482.chunk.js"
+    "revision": "ee277b4ae0554d0303d9",
+    "url": "/star-wars-app/static/js/main.ee277b4a.chunk.js"
   },
   {
     "revision": "e8c322de9658cbeb8a774b6624167c2c",
@@ -60,6 +60,10 @@ self.__precacheManifest = [
     "url": "/star-wars-app/static/media/flags.9c74e172.png"
   },
   {
+    "revision": "8e3c7f5520f5ae906c6cf6d7f3ddcd19",
+    "url": "/star-wars-app/static/media/icons.8e3c7f55.eot"
+  },
+  {
     "revision": "b87b9ba532ace76ae9f6edfe9f72ded2",
     "url": "/star-wars-app/static/media/icons.b87b9ba5.ttf"
   },
@@ -72,10 +76,6 @@ self.__precacheManifest = [
     "url": "/star-wars-app/static/media/brand-icons.c5ebe0b3.ttf"
   },
   {
-    "revision": "8e3c7f5520f5ae906c6cf6d7f3ddcd19",
-    "url": "/star-wars-app/static/media/icons.8e3c7f55.eot"
-  },
-  {
     "revision": "82f60bd0b94a1ed68b1e6e309ce2e8c3",
     "url": "/star-wars-app/static/media/outline-icons.82f60bd0.svg"
   },
@@ -84,11 +84,11 @@ self.__precacheManifest = [
     "url": "/star-wars-app/static/media/icons.962a1bf3.svg"
   },
   {
-    "revision": "a5b90b405e6cf432216e",
+    "revision": "dae8044b5e07825a660c",
     "url": "/star-wars-app/static/css/1.a122f1cb.chunk.css"
   },
   {
-    "revision": "0ae6be92fc82134afbee3f66fae42a40",
+    "revision": "4e49ac1460f176f688f64265132dae4e",
     "url": "/star-wars-app/index.html"
   }
 ];
