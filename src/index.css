@@ -14,12 +14,12 @@ code {
 }
 
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css?family=Press+Start+2P");
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
 body {
   background: #222224;
 }
 
-.🤖 {
+.robot {
   width: 25vh;
   height: 25vh;
   margin-top: -12.5vh;
@@ -31,18 +31,19 @@ body {
   border-radius: 50%;
   animation: rotator 2s forwards;
 }
-.🤖:after, .🤖:before {
-  content: "";
+.robot:after,
+.robot:before {
+  content: '';
   background: #222224;
   position: absolute;
 }
-.🤖:after {
+.robot:after {
   width: 100%;
   height: 0.5vh;
   top: 48%;
   left: 0;
 }
-.🤖:before {
+.robot:before {
   width: 30%;
   height: 30%;
   top: 10%;
@@ -50,7 +51,7 @@ body {
   border-radius: 50% 70%;
 }
 
-.後 {
+.word {
   color: #9d9ea2;
   position: absolute;
   left: 50%;
@@ -61,14 +62,14 @@ body {
   font-family: 'Press Start 2P', cursive;
 }
 
-.後:after {
-  content: "";
+.word:after {
+  content: '';
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  background:white;
+  background: white;
   animation: blockHider 2s forwards;
 }
 
@@ -90,4 +91,3 @@ body {
     left: 100%;
   }
 }
-

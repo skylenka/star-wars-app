@@ -2,15 +2,12 @@ import React from 'react';
 import { Container, Image } from 'semantic-ui-react';
 import logo from '../logo.svg';
 
-
 const Home = () => (
   <>
     <Container fluid>
-      
       <Image src={logo} size="small" centered />
-      <div className="🤖"></div>
-      <div className="後">Star wars</div> 
-      
+      <div className="robot" />
+      <div className="word">Star wars</div>
     </Container>
   </>
 );
