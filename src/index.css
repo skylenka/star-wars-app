@@ -59,6 +59,19 @@ body {
   font: 5vh Arial, sans-serif;
   font-family: 'Press Start 2P', cursive;
 }
+
+@media only screen and (max-width: 635px) {
+  .後 {
+    left: 59%;
+  }
+}
+
+@media only screen and (max-width: 535px) {
+  .後 {
+    left: 55%;
+  }
+}
+
 .後:after {
   content: "";
   position: absolute;
