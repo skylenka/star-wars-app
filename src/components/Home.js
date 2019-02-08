@@ -9,7 +9,7 @@ const Home = () => (
       
       <Image src={logo} size="small" centered />
       <div class="🤖"></div>
-<div class="後">Star wars</div> 
+      <div class="後">Star wars</div> 
     </Container>
   </>
 );
