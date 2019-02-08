@@ -7,7 +7,7 @@ const Home = () => (
     <Container fluid>
       <Image src={logo} size="small" centered />
       <div className="robot" />
-      <div className="word">Star wars</div>
+      <div className="word">Star Wars</div>
     </Container>
   </>
 );
