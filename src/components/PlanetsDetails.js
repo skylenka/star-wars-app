@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Card, Feed, Icon, Button } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 import ExtraCard from './ExtraCard';
 
-class PeopleDetails extends React.Component {
+class PeopleDetails extends Component {
   constructor(props) {
     super(props);
 

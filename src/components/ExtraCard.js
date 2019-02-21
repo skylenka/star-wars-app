@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Feed } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 
-class ExtraCard extends React.Component {
+class ExtraCard extends Component {
   constructor(props) {
     super(props);
 

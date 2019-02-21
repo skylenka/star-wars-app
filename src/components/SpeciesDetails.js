@@ -3,13 +3,13 @@ import { Card, Feed, Icon, Button } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 import ExtraCard from './ExtraCard';
 
-class PeopleDetails extends Component {
+class SpeciesDetails extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
       id: props.match.params.id,
-      link: `https://swapi.co/api/people/${props.match.params.id}/`,
+      link: `https://swapi.co/api/species/${props.match.params.id}/`,
       content: {}
     };
   }
@@ -37,8 +37,10 @@ class PeopleDetails extends Component {
                 </Feed.Label>
 
                 <Feed.Content>
-                  <Feed.Date content="Height:" />
-                  <Feed.Summary>{this.state.content.height}</Feed.Summary>
+                  <Feed.Date content="Classification:" />
+                  <Feed.Summary>
+                    {this.state.content.classification}
+                  </Feed.Summary>
                 </Feed.Content>
               </Feed.Event>
 
@@ -47,8 +49,8 @@ class PeopleDetails extends Component {
                   <Icon disabled name="weight" />
                 </Feed.Label>
                 <Feed.Content>
-                  <Feed.Date content="Mass:" />
-                  <Feed.Summary>{this.state.content.mass}</Feed.Summary>
+                  <Feed.Date content="Designation:" />
+                  <Feed.Summary>{this.state.content.designation}</Feed.Summary>
                 </Feed.Content>
               </Feed.Event>
 
@@ -57,8 +59,10 @@ class PeopleDetails extends Component {
                   <Icon disabled name="arrow alternate circle right outline" />
                 </Feed.Label>
                 <Feed.Content>
-                  <Feed.Date content="Hair color:" />
-                  <Feed.Summary>{this.state.content.hair_color}</Feed.Summary>
+                  <Feed.Date content="Average height:" />
+                  <Feed.Summary>
+                    {this.state.content.average_height}
+                  </Feed.Summary>
                 </Feed.Content>
               </Feed.Event>
               <Feed.Event>
@@ -66,8 +70,8 @@ class PeopleDetails extends Component {
                   <Icon disabled name="arrow alternate circle right" />
                 </Feed.Label>
                 <Feed.Content>
-                  <Feed.Date content="Skin color:" />
-                  <Feed.Summary>{this.state.content.skin_color}</Feed.Summary>
+                  <Feed.Date content="Skin colors:" />
+                  <Feed.Summary>{this.state.content.skin_colors}</Feed.Summary>
                 </Feed.Content>
               </Feed.Event>
               <Feed.Event>
@@ -75,26 +79,28 @@ class PeopleDetails extends Component {
                   <Icon disabled name="arrow alternate circle right outline" />
                 </Feed.Label>
                 <Feed.Content>
-                  <Feed.Date content="Eye color:" />
-                  <Feed.Summary>{this.state.content.eye_color}</Feed.Summary>
+                  <Feed.Date content="Hair colors:" />
+                  <Feed.Summary>{this.state.content.hair_colors}</Feed.Summary>
                 </Feed.Content>
               </Feed.Event>
               <Feed.Event>
                 <Feed.Label>
-                  <Icon disabled name="birthday" />
+                  <Icon disabled name="arrow alternate circle right outline" />
                 </Feed.Label>
                 <Feed.Content>
-                  <Feed.Date content="Birth:" />
-                  <Feed.Summary>{this.state.content.birth_year}</Feed.Summary>
+                  <Feed.Date content="Eye colors:" />
+                  <Feed.Summary>{this.state.content.eye_colors}</Feed.Summary>
                 </Feed.Content>
               </Feed.Event>
               <Feed.Event>
                 <Feed.Label>
-                  <Icon disabled name="genderless" />
+                  <Icon disabled name="arrow alternate circle right outline" />
                 </Feed.Label>
                 <Feed.Content>
-                  <Feed.Date content="Gender:" />
-                  <Feed.Summary>{this.state.content.gender}</Feed.Summary>
+                  <Feed.Date content="Average lifespan:" />
+                  <Feed.Summary>
+                    {this.state.content.average_lifespan}
+                  </Feed.Summary>
                 </Feed.Content>
               </Feed.Event>
               <Feed.Event>
@@ -110,6 +116,15 @@ class PeopleDetails extends Component {
               </Feed.Event>
               <Feed.Event>
                 <Feed.Label>
+                  <Icon disabled name="arrow alternate circle right outline" />
+                </Feed.Label>
+                <Feed.Content>
+                  <Feed.Date content="Language:" />
+                  <Feed.Summary>{this.state.content.language}</Feed.Summary>
+                </Feed.Content>
+              </Feed.Event>
+              <Feed.Event>
+                <Feed.Label>
                   <Icon disabled name="film" />
                 </Feed.Label>
                 <Feed.Content>
@@ -117,48 +132,6 @@ class PeopleDetails extends Component {
                   <Feed.Summary>
                     {this.state.content.films != null &&
                       this.state.content.films.map((el, i) => (
-                        <ExtraCard link={el} key={i} />
-                      ))}
-                  </Feed.Summary>
-                </Feed.Content>
-              </Feed.Event>
-              <Feed.Event>
-                <Feed.Label>
-                  <Icon disabled name="arrow alternate circle right outline" />
-                </Feed.Label>
-                <Feed.Content>
-                  <Feed.Date content="Species:" />
-                  <Feed.Summary>
-                    {this.state.content.species != null &&
-                      this.state.content.species.map((el, i) => (
-                        <ExtraCard link={el} key={i} />
-                      ))}
-                  </Feed.Summary>
-                </Feed.Content>
-              </Feed.Event>
-              <Feed.Event>
-                <Feed.Label>
-                  <Icon disabled name="car" />
-                </Feed.Label>
-                <Feed.Content>
-                  <Feed.Date content="Vehicles:" />
-                  <Feed.Summary>
-                    {this.state.content.vehicles != null &&
-                      this.state.content.vehicles.map((el, i) => (
-                        <ExtraCard link={el} key={i} />
-                      ))}
-                  </Feed.Summary>
-                </Feed.Content>
-              </Feed.Event>
-              <Feed.Event>
-                <Feed.Label>
-                  <Icon disabled name="ship" />
-                </Feed.Label>
-                <Feed.Content>
-                  <Feed.Date content="Starships:" />
-                  <Feed.Summary>
-                    {this.state.content.starships != null &&
-                      this.state.content.starships.map((el, i) => (
                         <ExtraCard link={el} key={i} />
                       ))}
                   </Feed.Summary>
@@ -197,7 +170,7 @@ class PeopleDetails extends Component {
         <Button
           color="violet"
           as={Link}
-          to="/people"
+          to="/films"
           style={{ margin: '0 0 10px 0' }}
         >
           Go back
@@ -207,4 +180,4 @@ class PeopleDetails extends Component {
   }
 }
 
-export default PeopleDetails;
+export default SpeciesDetails;
