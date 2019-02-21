@@ -31,7 +31,7 @@ class ExtraCard extends React.Component {
                 : this.state.content.name}
               <Link to={`/details/${this.state.link.match(/\/api\/(.*)/)[1]}`}>
                 {' '}
-                Klik{' '}
+                See more{' '}
               </Link>
             </Feed.Summary>
           </Feed.Content>

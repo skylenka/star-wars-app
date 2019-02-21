@@ -129,9 +129,10 @@ class PeopleDetails extends React.Component {
                 <Feed.Content>
                   <Feed.Date content="Species:" />
                   <Feed.Summary>
-                    {this.state.content.species != null && (
-                      <ExtraCard link={this.state.content.species} />
-                    )}
+                    {this.state.content.species != null &&
+                      this.state.content.species.map((el, i) => (
+                        <ExtraCard link={el} />
+                      ))}
                   </Feed.Summary>
                 </Feed.Content>
               </Feed.Event>
