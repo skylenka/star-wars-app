@@ -19,21 +19,20 @@ class ExtraCard extends React.Component {
         this.setState({ content: resp });
       });
   }
+
   render() {
     return (
       <>
         <Feed.Event>
           <Feed.Content>
             <Feed.Summary>
-              {this.state.content.title ? (
-                <Link to={`details/${this.state.link.match(/\/api\/(.*)/)[1]}`}>
-                  {this.state.content.title}
-                </Link>
-              ) : (
-                <Link to={`details/${this.state.link.match(/\/api\/(.*)/)[1]}`}>
-                  {this.state.content.name}
-                </Link>
-              )}
+              {this.state.content.title
+                ? this.state.content.title
+                : this.state.content.name}
+              <Link to={`/details/${this.state.link.match(/\/api\/(.*)/)[1]}`}>
+                {' '}
+                Klik{' '}
+              </Link>
             </Feed.Summary>
           </Feed.Content>
         </Feed.Event>
