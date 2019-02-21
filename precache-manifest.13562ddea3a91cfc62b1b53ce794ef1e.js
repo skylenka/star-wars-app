@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/star-wars-app/static/media/icons.faff9214.woff"
   },
   {
-    "revision": "166d7329cfb173ef0068",
+    "revision": "8cff278ab4cb629fcc90",
     "url": "/star-wars-app/static/css/main.204e0fe1.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = [
     "url": "/star-wars-app/static/media/brand-icons.a1a749e8.svg"
   },
   {
-    "revision": "bb6e57b64c820e0d5337",
-    "url": "/star-wars-app/static/js/1.bb6e57b6.chunk.js"
+    "revision": "3874162ddd9855c21dd9",
+    "url": "/star-wars-app/static/js/1.3874162d.chunk.js"
   },
   {
     "revision": "47f42d09a35e53ea5631",
@@ -24,12 +24,12 @@ self.__precacheManifest = [
     "url": "/star-wars-app/static/media/logo.5d5d9eef.svg"
   },
   {
-    "revision": "cd6c777f1945164224dee082abaea03a",
-    "url": "/star-wars-app/static/media/outline-icons.cd6c777f.woff2"
-  },
-  {
     "revision": "ef60a4f6c25ef7f39f2d25a748dbecfe",
     "url": "/star-wars-app/static/media/outline-icons.ef60a4f6.woff"
+  },
+  {
+    "revision": "cd6c777f1945164224dee082abaea03a",
+    "url": "/star-wars-app/static/media/outline-icons.cd6c777f.woff2"
   },
   {
     "revision": "701ae6abd4719e9c2ada3535a497b341",
@@ -44,8 +44,8 @@ self.__precacheManifest = [
     "url": "/star-wars-app/static/media/icons.0ab54153.woff2"
   },
   {
-    "revision": "166d7329cfb173ef0068",
-    "url": "/star-wars-app/static/js/main.166d7329.chunk.js"
+    "revision": "8cff278ab4cb629fcc90",
+    "url": "/star-wars-app/static/js/main.8cff278a.chunk.js"
   },
   {
     "revision": "e8c322de9658cbeb8a774b6624167c2c",
@@ -84,11 +84,11 @@ self.__precacheManifest = [
     "url": "/star-wars-app/static/media/icons.962a1bf3.svg"
   },
   {
-    "revision": "bb6e57b64c820e0d5337",
+    "revision": "3874162ddd9855c21dd9",
     "url": "/star-wars-app/static/css/1.a122f1cb.chunk.css"
   },
   {
-    "revision": "b46ec073d888b419194c6c45494bb293",
+    "revision": "08407de2d562ad258b821116168c8c6e",
     "url": "/star-wars-app/index.html"
   }
 ];
