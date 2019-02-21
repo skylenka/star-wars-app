@@ -26,12 +26,10 @@ class ExtraCard extends React.Component {
         <Feed.Event>
           <Feed.Content>
             <Feed.Summary>
-              {this.state.content.title
-                ? this.state.content.title
-                : this.state.content.name}
               <Link to={`/details/${this.state.link.match(/\/api\/(.*)/)[1]}`}>
-                {' '}
-                See more{' '}
+                {this.state.content.title
+                  ? this.state.content.title
+                  : this.state.content.name}
               </Link>
             </Feed.Summary>
           </Feed.Content>

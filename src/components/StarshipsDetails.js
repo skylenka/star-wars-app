@@ -172,7 +172,7 @@ class StarshipsDetails extends React.Component {
                   <Feed.Summary>
                     {this.state.content.pilots != null &&
                       this.state.content.pilots.map((el, i) => (
-                        <ExtraCard link={el} />
+                        <ExtraCard link={el} key={i} />
                       ))}
                   </Feed.Summary>
                 </Feed.Content>
@@ -187,7 +187,7 @@ class StarshipsDetails extends React.Component {
                   <Feed.Summary>
                     {this.state.content.films != null &&
                       this.state.content.films.map((el, i) => (
-                        <ExtraCard link={el} />
+                        <ExtraCard link={el} key={i} />
                       ))}
                   </Feed.Summary>
                 </Feed.Content>

@@ -117,7 +117,7 @@ class PeopleDetails extends React.Component {
                   <Feed.Summary>
                     {this.state.content.films != null &&
                       this.state.content.films.map((el, i) => (
-                        <ExtraCard link={el} />
+                        <ExtraCard link={el} key={i} />
                       ))}
                   </Feed.Summary>
                 </Feed.Content>
@@ -131,7 +131,7 @@ class PeopleDetails extends React.Component {
                   <Feed.Summary>
                     {this.state.content.species != null &&
                       this.state.content.species.map((el, i) => (
-                        <ExtraCard link={el} />
+                        <ExtraCard link={el} key={i} />
                       ))}
                   </Feed.Summary>
                 </Feed.Content>
@@ -145,7 +145,7 @@ class PeopleDetails extends React.Component {
                   <Feed.Summary>
                     {this.state.content.vehicles != null &&
                       this.state.content.vehicles.map((el, i) => (
-                        <ExtraCard link={el} />
+                        <ExtraCard link={el} key={i} />
                       ))}
                   </Feed.Summary>
                 </Feed.Content>
@@ -159,7 +159,7 @@ class PeopleDetails extends React.Component {
                   <Feed.Summary>
                     {this.state.content.starships != null &&
                       this.state.content.starships.map((el, i) => (
-                        <ExtraCard link={el} />
+                        <ExtraCard link={el} key={i} />
                       ))}
                   </Feed.Summary>
                 </Feed.Content>
