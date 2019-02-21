@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const Vehicles = () => (
   <ListRenderer
-    name="Species"
+    name="Vehicles"
     curr="https://swapi.co/api/vehicles/"
     renderCard={vehicle => (
       <Card key={vehicle.url}>
