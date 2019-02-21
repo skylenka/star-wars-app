@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Buttons from './Buttons';
+import Loader from './Loader';
 import { Card } from 'semantic-ui-react';
 
 class ListRenderer extends Component {
@@ -7,7 +8,7 @@ class ListRenderer extends Component {
     curr: null,
     prev: null,
     next: null,
-    content: []
+    content: null
   };
 
   handleRespond = link => {
@@ -44,7 +45,7 @@ class ListRenderer extends Component {
   };
 
   render() {
-    return (
+    return this.state.content ? (
       <>
         <h2 style={{ color: 'white' }}>{this.props.name}</h2>
         <Buttons
@@ -53,9 +54,10 @@ class ListRenderer extends Component {
           fnPrev={this.handlePrevButton}
           fnNext={this.handleNextButton}
         />
-
         <Card.Group>{this.state.content.map(this.props.renderCard)}</Card.Group>
       </>
+    ) : (
+      <Loader />
     );
   }
 }
