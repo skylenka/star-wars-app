@@ -12,6 +12,7 @@ import StarshipsDetails from './components/StarshipsDetails.js';
 import FilmsDetails from './components/FilmsDetails.js';
 import SpeciesDetails from './components/SpeciesDetails.js';
 import VehiclesDetails from './components/VehiclesDetails.js';
+import Search from './components/Search.js';
 import Home from './components/Home.js';
 import NotFound from './components/NotFound.js';
 import {
@@ -21,7 +22,7 @@ import {
   Switch,
   Redirect
 } from 'react-router-dom';
-import { Menu, Dropdown, Input } from 'semantic-ui-react';
+import { Menu, Dropdown } from 'semantic-ui-react';
 
 const MenuLink = ({ name, to, activeOnlyWhenExact }) => (
   <Route
@@ -64,14 +65,7 @@ const App = () => (
               </Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
-          <Menu.Item>
-            <Input
-              style={{ margin: '0px 10px 0px 0px' }}
-              className="icon"
-              icon="search"
-              placeholder="Search..."
-            />
-          </Menu.Item>
+          <MenuLink name="Search" as={Link} to="/search" />
         </Menu>
         <Switch>
           <Route exact path="/" component={Home} />
@@ -82,6 +76,7 @@ const App = () => (
           <Route path="/films" component={Films} />
           <Route path="/species" component={Species} />
           <Route path="/vehicles" component={Vehicles} />
+          <Route path="/search" component={Search} />
           <Route path="/details/people/:id?" component={PeopleDetails} />
           <Route path="/details/planets/:id?" component={PlanetsDetails} />
           <Route path="/details/starships/:id?" component={StarshipsDetails} />
