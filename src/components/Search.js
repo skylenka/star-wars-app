@@ -3,7 +3,8 @@ import { Input, Button } from 'semantic-ui-react';
 
 class Search extends Component {
   state = {
-    value: ''
+    value: '',
+    query: null
   };
 
   handleChange = event => {
@@ -16,6 +17,10 @@ class Search extends Component {
         this.state.value
       }`
     );
+    this.setState({
+      query: `https://swapi.co/api/people/?search=${this.state.value}`
+    });
+
     event.preventDefault();
   };
   render() {
