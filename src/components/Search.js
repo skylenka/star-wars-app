@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Input, Button } from 'semantic-ui-react';
-
+import ListRenderer from './ListRenderer';
+import { Card } from 'semantic-ui-react';
+import { Link } from 'react-router-dom';
 class Search extends Component {
   state = {
     value: '',
@@ -12,11 +14,11 @@ class Search extends Component {
   };
 
   handleClick = event => {
-    alert(
-      `This is query for search: https://swapi.co/api/people/?search=${
-        this.state.value
-      }`
-    );
+    // alert(
+    //   `This is query for search: https://swapi.co/api/people/?search=${
+    //     this.state.value
+    //   }`
+    // );
     this.setState({
       query: `https://swapi.co/api/people/?search=${this.state.value}`
     });
@@ -38,6 +40,29 @@ class Search extends Component {
         >
           Go!
         </Button>
+
+        <ListRenderer
+          name="Starships"
+          curr={this.state.query}
+          renderCard={starship => (
+            <Card key={starship.url}>
+              <Card.Content>
+                <Card.Header>{starship.name}</Card.Header>
+                <Card.Meta>Model: {starship.model}</Card.Meta>
+                <Card.Description>
+                  Manufacturer: {starship.manufacturer}
+                </Card.Description>
+              </Card.Content>
+              <Card.Content extra>
+                <div>
+                  <Link to={`details/${starship.url.match(/\/api\/(.*)/)[1]}`}>
+                    Read more
+                  </Link>
+                </div>
+              </Card.Content>
+            </Card>
+          )}
+        />
       </>
     );
   }
