@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 class Search extends Component {
   state = {
     value: '',
-    query: null
+    query: ''
   };
 
   handleChange = event => {
@@ -42,20 +42,19 @@ class Search extends Component {
         </Button>
 
         <ListRenderer
-          name="Starships"
+          name="People"
           curr={this.state.query}
-          renderCard={starship => (
-            <Card key={starship.url}>
+          renderCard={person => (
+            <Card key={person.url}>
               <Card.Content>
-                <Card.Header>{starship.name}</Card.Header>
-                <Card.Meta>Model: {starship.model}</Card.Meta>
-                <Card.Description>
-                  Manufacturer: {starship.manufacturer}
-                </Card.Description>
+                <Card.Header>{person.name}</Card.Header>
+                <Card.Meta>Height: {person.height}</Card.Meta>
+                <Card.Description>Birth: {person.birth_year}</Card.Description>
+                <Card.Description>Gender: {person.gender}</Card.Description>
               </Card.Content>
               <Card.Content extra>
                 <div>
-                  <Link to={`details/${starship.url.match(/\/api\/(.*)/)[1]}`}>
+                  <Link to={`details/${person.url.match(/\/api\/(.*)/)[1]}`}>
                     Read more
                   </Link>
                 </div>
