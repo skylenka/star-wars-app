@@ -13,8 +13,6 @@ import FilmsDetails from './components/FilmsDetails.js';
 import SpeciesDetails from './components/SpeciesDetails.js';
 import VehiclesDetails from './components/VehiclesDetails.js';
 import Home from './components/Home.js';
-import About from './components/About.js';
-import Contact from './components/Contact.js';
 import NotFound from './components/NotFound.js';
 import {
   BrowserRouter as Router,
@@ -23,7 +21,7 @@ import {
   Switch,
   Redirect
 } from 'react-router-dom';
-import { Menu, Dropdown } from 'semantic-ui-react';
+import { Menu, Dropdown, Input } from 'semantic-ui-react';
 
 const MenuLink = ({ name, to, activeOnlyWhenExact }) => (
   <Route
@@ -41,7 +39,7 @@ const App = () => (
   <>
     <Router>
       <div style={{ margin: '10px' }}>
-        <Menu inverted>
+        <Menu inverted fluid widths={3}>
           <MenuLink activeOnlyWhenExact={true} name="Home" as={Link} to="/" />
           <Dropdown text="Elements" pointing className="link item">
             <Dropdown.Menu>
@@ -66,8 +64,14 @@ const App = () => (
               </Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
-          <MenuLink name="About" as={Link} to="/about" />
-          <MenuLink name="Contact" as={Link} to="/contact" />
+          <Menu.Item>
+            <Input
+              style={{ margin: '0px 10px 0px 0px' }}
+              className="icon"
+              icon="search"
+              placeholder="Search..."
+            />
+          </Menu.Item>
         </Menu>
         <Switch>
           <Route exact path="/" component={Home} />
@@ -84,8 +88,6 @@ const App = () => (
           <Route path="/details/films/:id?" component={FilmsDetails} />
           <Route path="/details/species/:id?" component={SpeciesDetails} />
           <Route path="/details/vehicles/:id?" component={VehiclesDetails} />
-          <Route path="/about" component={About} />
-          <Route path="/contact" component={Contact} />
           <Route path="*" component={NotFound} />
         </Switch>
       </div>

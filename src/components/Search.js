@@ -1,14 +1,14 @@
 import React from 'react';
 import { Container, Header } from 'semantic-ui-react';
 
-const NotFound = () => (
+const Search = () => (
   <>
     <Container fluid>
       <Header style={{ color: 'white' }} as="h2">
-        Contact
+        Search results:
       </Header>
     </Container>
   </>
 );
 
-export default NotFound;
+export default Search;
