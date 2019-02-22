@@ -1,41 +1,38 @@
 import React, { Component } from 'react';
-import { Input } from 'semantic-ui-react';
+import { Input, Button } from 'semantic-ui-react';
 
 class Search extends Component {
   state = {
-    curr: null,
-    prev: null,
-    next: null,
-    content: null
+    value: ''
   };
 
-  handleRespond = link => {
-    if (link) {
-      fetch(link)
-        .then(resp => {
-          if (resp.ok) return resp.json();
-          else throw new Error('Błąd seci!');
-        })
-        .then(({ results, next, previous }) => {
-          this.setState({
-            content: results,
-            next: next,
-            prev: previous
-          });
-        })
-        .catch(err => {
-          console.log(err);
-        });
-    }
-    return;
+  handleChange = event => {
+    this.setState({ value: event.target.value });
   };
 
-  handleInput = () => {};
-
+  handleClick = event => {
+    alert(
+      `This is query for search: https://swapi.co/api/people/?search=${
+        this.state.value
+      }`
+    );
+    event.preventDefault();
+  };
   render() {
     return (
       <>
-        <Input placeholder="Search..." />
+        <Input
+          placeholder="Search..."
+          value={this.state.value}
+          onChange={this.handleChange}
+        />
+        <Button
+          style={{ margin: '0px 0px 0px 10px' }}
+          positive
+          onClick={this.handleClick}
+        >
+          Go!
+        </Button>
       </>
     );
   }
