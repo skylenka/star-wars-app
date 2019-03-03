@@ -45,6 +45,10 @@ class App extends Component {
     this.setState({ value: event.target.value });
   };
 
+  handleClick = event => {
+    this.setState({ value: '' });
+  };
+
   render() {
     return (
       <>
@@ -85,6 +89,7 @@ class App extends Component {
                   <Input
                     icon="search"
                     placeholder="Search..."
+                    value={this.state.value}
                     onChange={this.handleChange}
                   />
                 </Menu.Item>
@@ -92,6 +97,7 @@ class App extends Component {
                   name="Find"
                   as={Link}
                   to={`/search/${this.state.value}`}
+                  onClick={this.handleClick}
                 />
               </Menu.Menu>
             </Menu>
