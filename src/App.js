@@ -40,7 +40,7 @@ const App = () => (
   <>
     <Router>
       <div style={{ margin: '10px' }}>
-        <Menu inverted fluid widths={3}>
+        <Menu inverted>
           <MenuLink activeOnlyWhenExact={true} name="Home" as={Link} to="/" />
           <Dropdown text="Elements" pointing className="link item">
             <Dropdown.Menu>
