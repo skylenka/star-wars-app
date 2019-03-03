@@ -36,6 +36,10 @@ class ListRenderer extends Component {
     this.handleRespond(this.props.curr);
   }
 
+  componentDidUpdate() {
+    this.handleRespond(this.props.curr);
+  }
+
   handlePrevButton = () => {
     this.handleRespond(this.state.prev);
   };

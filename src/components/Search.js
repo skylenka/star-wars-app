@@ -14,16 +14,9 @@ class Search extends Component {
   };
 
   handleClick = event => {
-    // alert(
-    //   `This is query for search: https://swapi.co/api/people/?search=${
-    //     this.state.value
-    //   }`
-    // );
     this.setState({
       query: `https://swapi.co/api/people/?search=${this.state.value}`
     });
-
-    event.preventDefault();
   };
   render() {
     return (
