@@ -61,7 +61,7 @@ class App extends Component {
                 as={Link}
                 to="/"
               />
-              <Dropdown text="Elements" pointing className="link item">
+              <Dropdown text="Explore" pointing className="link item">
                 <Dropdown.Menu>
                   <Dropdown.Header>Categories</Dropdown.Header>
                   <Dropdown.Item as={Link} to="/starships">
@@ -87,15 +87,14 @@ class App extends Component {
               <Menu.Menu position="right">
                 <Menu.Item>
                   <Input
-                    style={{ width: '100px' }}
+                    style={{ width: '70px' }}
                     icon="search"
-                    placeholder="Search..."
                     value={this.state.value}
                     onChange={this.handleChange}
                   />
                 </Menu.Item>
                 <Menu.Item
-                  name="Find"
+                  name="Search"
                   as={Link}
                   to={`/search/${this.state.value}`}
                   onClick={this.handleClick}
