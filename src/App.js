@@ -87,14 +87,14 @@ class App extends Component {
               <Menu.Menu position="right">
                 <Menu.Item>
                   <Input
-                    style={{ width: '70px' }}
-                    icon="search"
+                    style={{ width: '100px' }}
+                    placeholder="Search..."
                     value={this.state.value}
                     onChange={this.handleChange}
                   />
                 </Menu.Item>
                 <Menu.Item
-                  name="Search"
+                  icon="search"
                   as={Link}
                   to={`/search/${this.state.value}`}
                   onClick={this.handleClick}
