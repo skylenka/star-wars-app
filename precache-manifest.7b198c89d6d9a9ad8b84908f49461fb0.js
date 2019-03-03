@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/star-wars-app/static/media/icons.faff9214.woff"
   },
   {
-    "revision": "18f76a06ad0b1c3592f0",
+    "revision": "04f0f890562819f0ad50",
     "url": "/star-wars-app/static/css/main.204e0fe1.chunk.css"
   },
   {
@@ -24,12 +24,12 @@ self.__precacheManifest = [
     "url": "/star-wars-app/static/media/logo.5d5d9eef.svg"
   },
   {
-    "revision": "cd6c777f1945164224dee082abaea03a",
-    "url": "/star-wars-app/static/media/outline-icons.cd6c777f.woff2"
-  },
-  {
     "revision": "ef60a4f6c25ef7f39f2d25a748dbecfe",
     "url": "/star-wars-app/static/media/outline-icons.ef60a4f6.woff"
+  },
+  {
+    "revision": "cd6c777f1945164224dee082abaea03a",
+    "url": "/star-wars-app/static/media/outline-icons.cd6c777f.woff2"
   },
   {
     "revision": "701ae6abd4719e9c2ada3535a497b341",
@@ -44,8 +44,8 @@ self.__precacheManifest = [
     "url": "/star-wars-app/static/media/icons.0ab54153.woff2"
   },
   {
-    "revision": "18f76a06ad0b1c3592f0",
-    "url": "/star-wars-app/static/js/main.18f76a06.chunk.js"
+    "revision": "04f0f890562819f0ad50",
+    "url": "/star-wars-app/static/js/main.04f0f890.chunk.js"
   },
   {
     "revision": "e8c322de9658cbeb8a774b6624167c2c",
@@ -68,12 +68,12 @@ self.__precacheManifest = [
     "url": "/star-wars-app/static/media/icons.b87b9ba5.ttf"
   },
   {
-    "revision": "c5ebe0b32dc1b5cc449a76c4204d13bb",
-    "url": "/star-wars-app/static/media/brand-icons.c5ebe0b3.ttf"
-  },
-  {
     "revision": "13db00b7a34fee4d819ab7f9838cc428",
     "url": "/star-wars-app/static/media/brand-icons.13db00b7.eot"
+  },
+  {
+    "revision": "c5ebe0b32dc1b5cc449a76c4204d13bb",
+    "url": "/star-wars-app/static/media/brand-icons.c5ebe0b3.ttf"
   },
   {
     "revision": "82f60bd0b94a1ed68b1e6e309ce2e8c3",
@@ -88,7 +88,7 @@ self.__precacheManifest = [
     "url": "/star-wars-app/static/css/1.a122f1cb.chunk.css"
   },
   {
-    "revision": "e895a55ef353859c0e1e08abc220fd03",
+    "revision": "706fc343d34d2da4603aadf5494d8c78",
     "url": "/star-wars-app/index.html"
   }
 ];
