@@ -38,19 +38,13 @@ const MenuLink = ({ name, to, activeOnlyWhenExact }) => (
 
 class App extends Component {
   state = {
-    value: '',
-    query: ''
+    value: ''
   };
 
   handleChange = event => {
     this.setState({ value: event.target.value });
   };
 
-  handleClick = event => {
-    this.setState({
-      query: `https://swapi.co/api/people/?search=${this.state.value}`
-    });
-  };
   render() {
     return (
       <>
@@ -88,9 +82,17 @@ class App extends Component {
               </Dropdown>
               <Menu.Menu position="right">
                 <Menu.Item>
-                  <Input icon="search" placeholder="Search..." />
+                  <Input
+                    icon="search"
+                    placeholder="Search..."
+                    onChange={this.handleChange}
+                  />
                 </Menu.Item>
-                <Menu.Item name="Find" as={Link} to="/search" />
+                <Menu.Item
+                  name="Find"
+                  as={Link}
+                  to={`/search/${this.state.value}`}
+                />
               </Menu.Menu>
             </Menu>
             <Switch>
@@ -102,7 +104,7 @@ class App extends Component {
               <Route path="/films" component={Films} />
               <Route path="/species" component={Species} />
               <Route path="/vehicles" component={Vehicles} />
-              <Route path="/search" component={Search} />
+              <Route path="/search/:id?" component={Search} />
               <Route path="/details/people/:id?" component={PeopleDetails} />
               <Route path="/details/planets/:id?" component={PlanetsDetails} />
               <Route

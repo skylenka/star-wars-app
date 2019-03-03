@@ -2,11 +2,11 @@ import React from 'react';
 import ListRenderer from './ListRenderer';
 import { Card } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
-const Search = () => (
+const Search = props => (
   <>
     <ListRenderer
       name="People"
-      // curr={this.props.query}
+      curr={`https://swapi.co/api/people/?search=${props.match.params.id}`}
       renderCard={person => (
         <Card key={person.url}>
           <Card.Content>
