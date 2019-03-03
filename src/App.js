@@ -87,6 +87,7 @@ class App extends Component {
               <Menu.Menu position="right">
                 <Menu.Item>
                   <Input
+                    style={{ width: '100px' }}
                     icon="search"
                     placeholder="Search..."
                     value={this.state.value}
